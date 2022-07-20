@@ -1,0 +1,1878 @@
+/* --------------------------------------------------------------------------------------
+|	AUTHOR 		: Elavarasan R                                                    |
+|	COMPANY		: Sportalytics Pvt. Ltd.,                                    |
+|	LOCATION	: Chennai, Tamil Nadu, India.                                   |
+|	DESCRIPTION	: This site is designed & developed by Sportalytics Private Limited. |
+|                         Contents are Subject to copyright. If you want to create      |
+|                         websites mailto:ramasubbu@sportalytics.in                   |
+----------------------------------------------------------------------------------------- */
+
+/* ------------------------------------ COMMON CSS STARTS -------------------------------- */
+@font-face {
+    font-family: 'SourceSansBold';
+    src: url('../fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansItalic';
+    src: url('../fonts/sourcesanspro-it-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-it-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansReg';
+    src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'QuicksandNormal';
+    src: url('../fonts/quicksand-normal-webfont.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'QuicksandBold';
+    src: url('../fonts/quicksand-boldwebfont.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.br-8{-webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;}
+.br-3, .progress-number-mark,.team-reports a:hover,.animate-reports a:hover,.arrow-btn .fa,ul.notif-widget a.odmslogin{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.br-5,.border-radius, .dropdown-menu, .owl-carousel .item, .custom-seekbar span,.switch-btn,.pg-container,.pg-instruction p,.hlt-info{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+.user-login.form-control, .user-pwd.form-control,.filter-inputs .form-control{-webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px;}
+.top-radius, .main-tab a{-webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0;}
+.right-radius{-webkit-border-radius:0 5px 5px 0; -moz-border-radius:0 5px 5px 0; border-radius:0 5px 5px 0;}
+.bottom-radius{-webkit-border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px;}
+.fixtures-link .border-radius{-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.left-radius{-webkit-border-radius:5px 0 0 5px; -moz-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px;}
+
+*{margin:0; padding:0; font-family:QuicksandNormal, Arial, Helvetica, sans-serif; font-size:13px; color:#333; white-space:normal;}
+ul, li{list-style:none;}
+a, a:active, a:hover, a:focus, img, input, button, textarea, .uib-daypicker:focus{outline:0 none; text-decoration:none;}
+select:focus, .slick-list:focus, .slick-prev:focus, .slick-next:focus,.ui-corner-all:focus{outline:none;}
+table{border-collapse:collapse; vertical-align:top; width:100%; max-width:100%;}
+input, button{overflow:visible;}
+button, input[type="submit"]{cursor:pointer;}
+strong, b, b i{color:inherit;}
+.hlt-txt{color:#f00 !important;}
+i{font-family:SourceSansItalic;}
+.fx-team-name,.fx-score{font-family:SourceSansBold;}
+.txt-center, .left-menu .dashboard-menu a, figcaption, .stats-btn *, .dd-panel.normal a, .dd-panel.normal span, .dd-panel.slim a, .dd-panel.slim span, .pgm-listings, .main-tab, .search-player .search-icon, .scorecard-page .result-video a, .third-tab, .team-vs,.switch-btn a,.login-container .link-btn,.action-btn,.dp-arrow,.custom-txt-box a{text-align:center;}
+.txt-right, .players-list a span.player-runs,.pgm-view-style .main-tab,.player-report-page .right-container .third-tab{text-align:right;}
+.txt-left, .progress-bar, .action-panel *, .dd-panel.normal a, .dd-panel.slim a,#bat-adv-filter .main-tab,.wagonwheel-container .common-legend-container,.prm-page2 .pgm-listings,.pgm-view-type .pgm-listings{text-align:left;}
+img{margin-left:auto; margin-right:auto; /*display:inline-block !important;*/}
+p{line-height:24px;}
+strong, b, b i, i, .hlt-txt, p a{font-size:inherit;}
+
+html, body{overflow:hidden; width:100%; height:100%;}
+
+.login-bg, .modal-content, .alert-popup{-webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover;}
+
+.radio, .slider, .custom-seekbar,.tournament-teams,.tmt-teams .mask{cursor:pointer;}
+textarea{resize:none;}
+
+.icon-animated-bell{-moz-animation:ringing 2s 5 ease 1s; -webkit-animation:ringing 2s 5 ease 1s; -o-animation:ringing 2s 5 ease 1s; -ms-animation:ringing 2s 5 ease 1s; animation:ringing 2s 5 ease 1s; -moz-transform-origin:50% 0; -webkit-transform-origin:50% 0; -o-transform-origin:50% 0; -ms-transform-origin:50% 0; transform-origin:50%;}
+
+@-moz-keyframes ringing{0%{-moz-transform:rotate(-15deg)}2%{-moz-transform:rotate(15deg)}4%{-moz-transform:rotate(-18deg)}6%{-moz-transform:rotate(18deg)}8%{-moz-transform:rotate(-22deg)}10%{-moz-transform:rotate(22deg)}12%{-moz-transform:rotate(-18deg)}14%{-moz-transform:rotate(18deg)}16%{-moz-transform:rotate(-12deg)}18%{-moz-transform:rotate(12deg)}20%{-moz-transform:rotate(0deg)}}@-webkit-keyframes ringing{0%{-webkit-transform:rotate(-15deg)}2%{-webkit-transform:rotate(15deg)}4%{-webkit-transform:rotate(-18deg)}6%{-webkit-transform:rotate(18deg)}8%{-webkit-transform:rotate(-22deg)}10%{-webkit-transform:rotate(22deg)}12%{-webkit-transform:rotate(-18deg)}14%{-webkit-transform:rotate(18deg)}16%{-webkit-transform:rotate(-12deg)}18%{-webkit-transform:rotate(12deg)}20%{-webkit-transform:rotate(0deg)}}@-ms-keyframes ringing{0%{-ms-transform:rotate(-15deg)}2%{-ms-transform:rotate(15deg)}4%{-ms-transform:rotate(-18deg)}6%{-ms-transform:rotate(18deg)}8%{-ms-transform:rotate(-22deg)}10%{-ms-transform:rotate(22deg)}12%{-ms-transform:rotate(-18deg)}14%{-ms-transform:rotate(18deg)}16%{-ms-transform:rotate(-12deg)}18%{-ms-transform:rotate(12deg)}20%{-ms-transform:rotate(0deg)}}@keyframes ringing{0%{transform:rotate(-15deg)}2%{transform:rotate(15deg)}4%{transform:rotate(-18deg)}6%{transform:rotate(18deg)}8%{transform:rotate(-22deg)}10%{transform:rotate(22deg)}12%{transform:rotate(-18deg)}14%{transform:rotate(18deg)}16%{transform:rotate(-12deg)}18%{transform:rotate(12deg)}20%{transform:rotate(0deg)}}.icon-animated-vertical{display:inline-block;-moz-animation:vertical 2s 5 ease 2s;-webkit-animation:vertical 2s 5 ease 2s;-o-animation:vertical 2s 5 ease 2s;-ms-animation:vertical 2s 5 ease 2s;animation:vertical 2s 5 ease 2s}
+@-moz-keyframes vertical{0%{-moz-transform:translate(0,-3px)}4%{-moz-transform:translate(0,3px)}8%{-moz-transform:translate(0,-3px)}12%{-moz-transform:translate(0,3px)}16%{-moz-transform:translate(0,-3px)}20%{-moz-transform:translate(0,3px)}22%{-moz-transform:translate(0,0)}}@-webkit-keyframes vertical{0%{-webkit-transform:translate(0,-3px)}4%{-webkit-transform:translate(0,3px)}8%{-webkit-transform:translate(0,-3px)}12%{-webkit-transform:translate(0,3px)}16%{-webkit-transform:translate(0,-3px)}20%{-webkit-transform:translate(0,3px)}22%{-webkit-transform:translate(0,0)}}@-ms-keyframes vertical{0%{-ms-transform:translate(0,-3px)}4%{-ms-transform:translate(0,3px)}8%{-ms-transform:translate(0,-3px)}12%{-ms-transform:translate(0,3px)}16%{-ms-transform:translate(0,-3px)}20%{-ms-transform:translate(0,3px)}22%{-ms-transform:translate(0,0)}}@keyframes vertical{0%{transform:translate(0,-3px)}4%{transform:translate(0,3px)}8%{transform:translate(0,-3px)}12%{transform:translate(0,3px)}16%{transform:translate(0,-3px)}20%{transform:translate(0,3px)}22%{transform:translate(0,0)}}.icon-animated-hand-pointer{display:inline-block;-moz-animation:hand-pointer 2s 4 ease 2s;-webkit-animation:hand-pointer 2s 4 ease 2s;-o-animation:hand-pointer 2s 4 ease 2s;-ms-animation:hand-pointer 2s 4 ease 2s;animation:hand-pointer 2s 4 ease 2s}
+@-moz-keyframes hand-pointer{0%{-moz-transform:translate(0,0)}6%{-moz-transform:translate(5px,0)}12%{-moz-transform:translate(0,0)}18%{-moz-transform:translate(5px,0)}24%{-moz-transform:translate(0,0)}30%{-moz-transform:translate(5px,0)}36%{-moz-transform:translate(0,0)}}.icon-animated-wrench{display:inline-block;-moz-animation:wrenching 2.5s 4 ease;-webkit-animation:wrenching 2.5s 4 ease;-o-animation:wrenching 2.5s 4 ease;-ms-animation:wrenching 2.5s 4 ease;animation:wrenching 2.5s 4 ease;-moz-transform-origin:90% 35%;-webkit-transform-origin:90% 35%;-o-transform-origin:90% 35%;-ms-transform-origin:90% 35%;transform-origin:90% 35%}
+@-moz-keyframes wrenching{0%{-moz-transform:rotate(-12deg)}8%{-moz-transform:rotate(12deg)}10%{-moz-transform:rotate(24deg)}18%{-moz-transform:rotate(-24deg)}20%{-moz-transform:rotate(-24deg)}28%{-moz-transform:rotate(24deg)}30%{-moz-transform:rotate(24deg)}38%{-moz-transform:rotate(-24deg)}40%{-moz-transform:rotate(-24deg)}48%{-moz-transform:rotate(24deg)}50%{-moz-transform:rotate(24deg)}58%{-moz-transform:rotate(-24deg)}60%{-moz-transform:rotate(-24deg)}68%{-moz-transform:rotate(24deg)}75%{-moz-transform:rotate(0deg)}}@-webkit-keyframes wrenching{0%{-webkit-transform:rotate(-12deg)}8%{-webkit-transform:rotate(12deg)}10%{-webkit-transform:rotate(24deg)}18%{-webkit-transform:rotate(-24deg)}20%{-webkit-transform:rotate(-24deg)}28%{-webkit-transform:rotate(24deg)}30%{-webkit-transform:rotate(24deg)}38%{-webkit-transform:rotate(-24deg)}40%{-webkit-transform:rotate(-24deg)}48%{-webkit-transform:rotate(24deg)}50%{-webkit-transform:rotate(24deg)}58%{-webkit-transform:rotate(-24deg)}60%{-webkit-transform:rotate(-24deg)}68%{-webkit-transform:rotate(24deg)}75%{-webkit-transform:rotate(0deg)}}@-o-keyframes wrenching{0%{-o-transform:rotate(-12deg)}8%{-o-transform:rotate(12deg)}10%{-o-transform:rotate(24deg)}18%{-o-transform:rotate(-24deg)}20%{-o-transform:rotate(-24deg)}28%{-o-transform:rotate(24deg)}30%{-o-transform:rotate(24deg)}38%{-o-transform:rotate(-24deg)}40%{-o-transform:rotate(-24deg)}48%{-o-transform:rotate(24deg)}50%{-o-transform:rotate(24deg)}58%{-o-transform:rotate(-24deg)}60%{-o-transform:rotate(-24deg)}68%{-o-transform:rotate(24deg)}75%{-o-transform:rotate(0deg)}}@-ms-keyframes wrenching{0%{-ms-transform:rotate(-12deg)}8%{-ms-transform:rotate(12deg)}10%{-ms-transform:rotate(24deg)}18%{-ms-transform:rotate(-24deg)}20%{-ms-transform:rotate(-24deg)}28%{-ms-transform:rotate(24deg)}30%{-ms-transform:rotate(24deg)}38%{-ms-transform:rotate(-24deg)}40%{-ms-transform:rotate(-24deg)}48%{-ms-transform:rotate(24deg)}50%{-ms-transform:rotate(24deg)}58%{-ms-transform:rotate(-24deg)}60%{-ms-transform:rotate(-24deg)}68%{-ms-transform:rotate(24deg)}75%{-ms-transform:rotate(0deg)}}@keyframes wrenching{0%{transform:rotate(-12deg)}8%{transform:rotate(12deg)}10%{transform:rotate(24deg)}18%{transform:rotate(-24deg)}20%{transform:rotate(-24deg)}28%{transform:rotate(24deg)}30%{transform:rotate(24deg)}38%{transform:rotate(-24deg)}40%{transform:rotate(-24deg)}48%{transform:rotate(24deg)}50%{transform:rotate(24deg)}58%{transform:rotate(-24deg)}60%{transform:rotate(-24deg)}68%{transform:rotate(24deg)}75%{transform:rotate(0deg)}}@-moz-keyframes blinking{0%{opacity:1}40%{opacity:0}80%{opacity:1}}@-webkit-keyframes blinking{0%{opacity:1}40%{opacity:0}80%{opacity:1}}@-ms-keyframes blinking{0%{opacity:1}40%{opacity:0}80%{opacity:1}}@keyframes blinking{0%{opacity:1}40%{opacity:0}80%{opacity:1}}@-moz-keyframes pulsating{0%{-moz-transform:scale(1)}5%{-moz-transform:scale(0.75)}10%{-moz-transform:scale(1)}15%{-moz-transform:scale(1.25)}20%{-moz-transform:scale(1)}25%{-moz-transform:scale(0.75)}30%{-moz-transform:scale(1)}35%{-moz-transform:scale(1.25)}40%{-moz-transform:scale(1)}}@-webkit-keyframes pulsating{0%{-webkit-transform:scale(1)}5%{-webkit-transform:scale(0.75)}10%{-webkit-transform:scale(1)}15%{-webkit-transform:scale(1.25)}20%{-webkit-transform:scale(1)}25%{-webkit-transform:scale(0.75)}30%{-webkit-transform:scale(1)}35%{-webkit-transform:scale(1.25)}40%{-webkit-transform:scale(1)}}@-ms-keyframes pulsating{0%{-ms-transform:scale(1)}5%{-ms-transform:scale(0.75)}10%{-ms-transform:scale(1)}15%{-ms-transform:scale(1.25)}20%{-ms-transform:scale(1)}25%{-ms-transform:scale(0.75)}30%{-ms-transform:scale(1)}35%{-ms-transform:scale(1.25)}40%{-ms-transform:scale(1)}}@keyframes pulsating{0%{transform:scale(1)}5%{transform:scale(0.75)}10%{transform:scale(1)}15%{transform:scale(1.25)}20%{transform:scale(1)}25%{transform:scale(0.75)}30%{transform:scale(1)}35%{transform:scale(1.25)}40%{transform:scale(1)}}
+
+.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+.stats-btn:active{-moz-transform:translate(0px, 3px); -webkit-transform:translate(0px, 3px); transform:translate(0px, 3px);}
+.transition,.team-reports a:hover,.main-nutrition ul.expanded,.main-nutrition ul.collapsed{-webkit-transition:all 300ms ease-in-out; -moz-transition:all 300ms ease-in-out; -o-transition:all 300ms ease-in-out; -ms-transition:all 300ms ease-in-out; transition:all 300ms ease-in-out;}
+.slider,.lg-video .button-controls,.lg-video:hover .button-controls{-webkit-transition:.4s; transition:.4s;}
+.slider:before{-webkit-transition:.4s; transition: .4s;}
+.switch input:checked + .slider:before {-webkit-transform:translateX(26px); -ms-transform:translateX(26px); transform:translateX(26px);}
+.animation-left{-webkit-transition:width 1s ease-in-out; -moz-transition:width 1s ease-in-out; -o-transition:width 1s ease-in-out; -ms-transition:width 1s ease-in-out; transition:width 1s ease-in-out; width:90%;}
+.pgm-list,.team-reports a,.animate-reports a{transition:transform 0.3s,opacity 0.6s; -webkit-transition:-webkit-transform 0.3s,opacity 0.6s; -moz-transition:-moz-transform 0.3s,opacity 0.6s; -ms-transition:-ms-transform 0.3s,opacity 0.6s; -o-transition:-o-transform 0.3s,opacity 0.6s;}
+.pgm-left .pgm-list:hover{-webkit-transform:translate(0,-7px); transform:translate(0,-7px);}
+.team-reports a:hover,.animate-reports a:hover{-webkit-transform:translate(0,-3px); transform:translate(0,-3px);}
+.progress-number-mark, .down-arrow{-moz-transform:translateX(-50%); -o-transform:translateX(-50%); transform:translateX(-50%); -ms-transform:translateX(-50%); -webkit-transform: translateX(-50%);}
+.close-btn span:nth-child(1), .close-btn span:nth-child(2){-webkit-transition:.25s ease-in-out; -moz-transition:.25s ease-in-out; -o-transition:.25s ease-in-out; transition:.25s ease-in-out;}
+.rotation, .close-btn span:nth-child(1), .close-btn span:nth-child(2){-webkit-transform:rotate(0deg); -moz-transform:rotate(0deg); -o-transform:rotate(0deg); transform:rotate(0deg);}
+.close-btn.open span:nth-child(1){-webkit-transform:rotate(135deg); -moz-transform:rotate(135deg); -o-transform:rotate(135deg); transform:rotate(135deg);}
+.close-btn.open span:nth-child(2){-webkit-transform:rotate(-135deg); -moz-transform:rotate(-135deg); -o-transform:rotate(-135deg); transform:rotate(-135deg);}
+.box-shadow,.login-container{box-shadow:5px 5px 50px rgba(0, 0, 0, 0.36);}
+.modal-dialog .modal-content,.login-controls .form-control,.filter-inputs .form-control,.form-control{box-shadow:none;}
+.left-shadow{-webkit-box-shadow: -4px 0px 10px 0px #B2B2B2; box-shadow: -4px 0px 10px 0px #B2B2B2;}
+.error-widget, .success-widget, .warning-widget, .session-widget{-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.54); -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.54); box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.54);}
+.wlcm-container .dropdown-menu{box-shadow:0 3px 12px rgba(0, 0, 0, 0.05); -webkit-box-shadow:0 3px 12px rgba(0, 0, 0, 0.05); -moz-box-shadow:0 3px 12px rgba(0, 0, 0, 0.05); border-color:rgba(120, 130, 140, 0.13);}
+.uib-dropdown-menu .dropdown-menu{-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.2); box-shadow: 0 2px 4px rgba(0,0,0,.2);}
+.pgm-header{-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);}
+.fx-left:before{background:-webkit-linear-gradient(top,rgba(154,154,154,0) 0,#a5c4e7 15%,#0667d6 50%,#a5c4e7 85%,rgba(154,154,154,0) 100%); background:-moz-linear-gradient(top,rgba(154,154,154,0) 0,#9a9a9a 15%,#9a9a9a 50%,#9a9a9a 85%,rgba(154,154,154,0) 100%); background: -ms-linear-gradient(top,rgba(154,154,154,0) 0,#9a9a9a 15%,#9a9a9a 50%,#9a9a9a 85%,rgba(154,154,154,0) 100%); background: -o-linear-gradient(top,rgba(154,154,154,0) 0,#9a9a9a 15%,#9a9a9a 50%,#9a9a9a 85%,rgba(154,154,154,0) 100%); background: linear-gradient(top,rgba(154,154,154,0) 0,#9a9a9a 15%,#9a9a9a 50%,#9a9a9a 85%,rgba(154,154,154,0) 100%);}
+.dashboard-container .event-dtpkr .input-group input,table.pg-table .form-control{box-shadow:none;}
+.switch-btn a.select{box-shadow: inset 0 3px 5px rgba(0,0,0,.125);}
+.video-container .overlay p{text-shadow:#2e312c 2px 2px 5px;}
+.fc-today-button{text-shadow:none;}
+.element-item.not-available img{-webkit-filter:grayscale(1); -webkit-filter:grayscale(100%); filter:grayscale(100%); filter:gray;}
+.loser *{opacity:0.6;}
+.match-container .overlay, .overlay-btn{opacity:0;}
+.match-container:hover .overlay{opacity:0.6;}
+.match-container:hover .overlay-btn{opacity:1;}
+.overlay-btn{transform: scale(0);}
+.match-container:hover .overlay-btn{transform: scale(1);}
+.match-container:hover .overlay-btn{webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.file-remove{-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-ms-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;}
+
+.white, .uib-datepicker-popup.dropdown-menu, .search-player .search-container .close-btn.open span:nth-child(1), .search-player .search-container .close-btn.open span:nth-child(2), .msg-left .msg-group a.select, .normal-table .row01, .left-container .search-panel, .slider:before, .success-container, .error-container, .warning-container, .session-container,.match-container table, .overview-body, amo-multiselect .btn-default:hover, amo-multiselect .btn-default:focus, amo-multiselect .open>.dropdown-toggle.btn-default, amo-multiselect .open>.dropdown-toggle.btn-default:hover, amo-multiselect .open>.dropdown-toggle.btn-default:focus,.fitness-container,.switch-btn,.right-white,.dashboard-container.dashboard-page .input-group-btn .btn,.calendar-container,.uib-dropdown-menu .dropdown,.multi-select a,.single-select a, .overall-match,.fx-container,ul.notif-widget a.odmslogin,.assign-pgm-parameter .draggable-widget,.custom-color{background-color:#fff;}
+body,.pgm-name{background-color:#e9e9e9;}
+#video-modal,#video-modal .modal-content{background-color:#000;}
+.pg-instruction p,.hlt-info{background-color:#abdfff;}
+.login-background{background-color:#ccd027;}
+.main-nutrition li{background-color:#d6e9ff;}
+.upload-btn,.upload-list a.file-caption{background-color:#0667d6;}
+.video-ico{background-color:#d42b22;}
+.video-container a:hover .video-ico{background-color:#b10909;}
+.team-reports a:hover,.animate-reports a:hover,.nutrition-header{background-color:#d6d6d6;}
+.match-venue{background-color:#e8f3ff;}
+.switch-btn a.select{background-color:#e6e6e6;}
+.apps-left, .search-panel, .search-player .search-icon{background-color:#353b45;}
+.slider{background-color: #da2626;}
+.switch input:checked + .slider{background-color: #55ce63;}
+.switch input:focus + .slider {box-shadow: 0 0 1px #55ce63;}
+amo-multiselect .btn-group.open .dropdown-toggle{box-shadow:none;}
+.switch input:checked + .slider:before {-webkit-transform:translateX(26px); -ms-transform:translateX(26px); transform: translateX(26px);}
+.view-by-icon.normal, .dd-panel{background-color:#212731;}
+.uib-button-bar, .uib-weeks .h6, .editable-hdr, .events-detail-container, .player-stats-container, .linear-chart{background-color:#eee;}
+.fielding-summary{background-color:#f5f5f5;}
+.user-profile, .profile-img, .profile-img img, .profile-popup li .dw-user-box .u-img, .third-tab a.select,.multi-select a.select,.multi-select a:hover,.single-select a.select,.single-select a:hover, .single-container a.select,.tournament-view a.select .fa{background-color:#c65c44;}
+.editable-field input[type="text"].form-control:focus, .editable-field textarea.form-control:focus{background-color:#ffc;}
+.event-time-type  .event-time-clock, .select-category, .normal-table .table-hdr, .scrollable-table .table-hdr{background-color:#666;}
+.search-player .player-photo, .incoming-msg, .msg-section a.unread, .msg-section a.unread:hover, .player-container .player-photo, .scorecard-page .result-video a, .third-tab a, .custom-seekbar,.pgm-bar{background-color:#ddd;}
+.single-container a,.tournament-view .fa,.watchlist-img{background-color:#ccc;}
+.msg-left .msg-group a{background-color:#333;}
+.progress-number-mark{background-color:#161616;}
+.msg-pane:nth-child(even), .dashboard-container .event-time-type  a:hover, .uib-datepicker-popup .btn-default:hover, .uib-daypicker .btn-default:hover, .msg-section a:hover, .normal-table .row02, .fielding-summary a.select{background-color:#eef7fe;}
+.action-btn a:hover{background:#ad363c;}
+.custom-cmb select,.tournament-filter a,.video-container figcaption{background-color:#29b6f6;}
+.outgoing-msg{background-color:#45b464;}
+.alert-popup .alert-no{background-color:#23b9f5;}
+span.ico-hlt.ico-01,.pgm-status.in-completed,.selected-pgm a.remove-pgm,.remove-exercise{background-color:#cc0000;}
+span.ico-hlt.ico-02,.pgm-deviation.yes{background-color:#095bad;}
+span.ico-hlt.ico-03,.pgm-status.completed,.pgm-deviation.no{background-color:#41cb52;}
+ul.notif-widget a.odmslogin:hover{background-color:#d5f6ff;}
+.element-item.select{background-color:#afddfb;}
+
+.run-counts span{background-color:#547582;}
+.run-counts span.one-run{background-color:#a92689;}
+.run-counts span.two-run{background-color:#e32b62;}
+.run-counts span.three-run{background-color:#8746ce;}
+.run-counts span.four-run{background-color:#3945e4;}
+.run-counts span.six-run{background-color:#0e8c62;}
+.run-counts span.tot-run{background-color:#3c6372;}
+/* .normal-table tr:nth-child(even){background-color:#eef7fe;} */
+.view-by-icon .fa.fa-all, .dd-panel .fa.fa-all, .dd-panel .match:hover, .context-menu, .context-menu01{background-color:#1bb99a;}
+.view-by-icon .fa.fa-match, .dd-panel .fa.fa-match, .dd-panel .match:hover,.login-container .link-btn,.filter-header,.pg-title,.pg-parameter tr.hdr-row td,a.pgmlist-move,.month-view a.select,a.add-new{background-color:#039cfd;}
+.view-by-icon .fa.fa-practice, .dd-panel .fa.fa-practice, .dd-panel .practice:hover{background-color:#ff7aa3;}
+.view-by-icon .fa.fa-strength, .dd-panel .fa.fa-strength, .dd-panel .strength:hover{background-color:#f1b53d;}
+.view-by-icon .fa.fa-fitness, .dd-panel .fa.fa-fitness, .dd-panel .fitness:hover{background-color:#aa6708;}
+.view-by-icon .fa.fa-physio, .dd-panel .fa.fa-physio, .dd-panel .physio:hover{background-color:#5cb85c;}
+.view-by-icon .fa.fa-travel, .dd-panel .fa.fa-travel, .dd-panel .travel:hover{background-color:#31b0d5;}
+.view-by-icon .fa.fa-meeting, .dd-panel .fa.fa-meeting, .dd-panel .meeting:hover{background-color:#ec971f;}
+.view-by-icon .fa.fa-others, .dd-panel .fa.fa-others, .dd-panel .others:hover{background-color:#4f2577;}
+.view-by-icon .fa.fa-net-session, .dd-panel .fa.fa-net-session, .dd-panel .net-session:hover{background-color:#d9534f;}
+.available .player-availability{background-color:#93ba1c;}
+.not-available .player-availability{background-color:#da2626;}
+.rehap-available .player-availability{background-color:#ffc000;}
+.green, .normal-table .green td{background-color:#55ce63;}
+.blue, .normal-table .blue td,.btm-bg,.overview-footer a.player-fitness{background-color:#009efb;}
+.red,.tournament-filter.tnmt-bk a,a.view-more.ico-cancel .fa{background-color:#da2626;}
+.yellow{background-color:#ffbc34;}
+.senior-men,.pgm-value{background-color:#5b00f1;}
+.senior-women{background-color:#ff7579;}
+.under23-men{background-color:#ffbc00;}
+.under16-men,.back-arrow .fa,.action-btn.btn-delete{background-color:#ff0000;}
+.under10-men{background-color:#ce0f7b;}
+.color01{background-color:#25C8FB;}
+.container-color01{background-color:#c5ceff;}
+.color02,a.view-more.ico-more .fa{background-color:#4cb050;}
+.color03{background-color:#143a5f;}
+.color04{background-color:#ea1e63;}
+.container-color04{background-color:#ffcfdf;}
+.color05{background-color:#d89102;}
+.color06,table.pg-table td.day-date{background-color:#6839b7;}
+.tmt-teams.ipl .overview-header,a.view-more .fa{background-color:#19398a;}
+.tmt-teams.apl .overview-header{background-color:#0f3fa1;}
+.tmt-teams.bbl .overview-header{background-color:#a5102e;}
+.tmt-teams.bpl .overview-header{background-color:#007641;}
+.tmt-teams.cpl .overview-header{background-color:#4c3d98;}
+.tmt-teams.psl .overview-header{background-color:#1d4346;}
+.tmt-teams.rst20 .overview-header{background-color:#60001b;}
+.tmt-teams.t20blast .overview-header{background-color:#5d2386;}
+.container-color06{background-color:#dbc9f9;}
+.first-place,.stats-page .stats-team{background-color:#315265;}
+.stats-team.csk, .first-place.csk{background-color:#FDB913;}
+.stats-team.dd, .first-place.dd{background-color:#b71f1f;}
+.stats-team.kxip, .first-place.kxip{background-color:#b32524;}
+.stats-team.kkr, .first-place.kkr{background-color:#3d2256;}
+.stats-team.mi, .first-place.mi{background-color:#005ea0;}
+.stats-team.rr, .first-place.rr{background-color:#004B8C;}
+.stats-team.rcb, .first-place.rcb{background-color:#db3e48;}
+.stats-team.srh, .first-place.srh{background-color:#fb653f;}
+/*tnpl bgcolors*/
+.stats-team.dld, .first-place.dld{background-color:#ce3431;}
+.stats-team.tp, .first-place.tp{background-color:#861619;}
+.stats-team.csg, .first-place.csg{background-color:#ec0e15;}
+.stats-team.smp, .first-place.smp{background-color:#283882;}
+.stats-team.lkk, .first-place.lkk{background-color:#003e66;}
+.stats-team.rtw, .first-place.rtw{background-color:#e46526;}
+.stats-team.vbkv, .first-place.vbkv{background-color:#421b50;}
+.stats-team.idkk, .first-place.idkk{background-color:#cf2887;}
+/*bigbash bgcolors*/
+.stats-team.as, .first-place.as{background-color:#0099d8;}
+.stats-team.bh, .first-place.bh{background-color:#27a6af;}
+.stats-team.hh, .first-place.hh{background-color:#674297;}
+.stats-team.ms, .first-place.ms{background-color:#8fc442;}
+.stats-team.ps, .first-place.ps{background-color:#e13101;}
+.stats-team.rg, .first-place.rg{background-color:#ee3140;}
+.stats-team.ss, .first-place.ss{background-color:#dc0182;}
+.stats-team.st, .first-place.st{background-color:#94ca4e;}
+/*india*/
+.assign-pgm-list{background-color:#d8ecbc;}
+.assign-pgm-list:hover{background-color:#c2da9f;}
+.stats-team.india, .first-place.india{background-color:#2255a4;}
+.tournament-player.ipl{background-color:#19398a;}
+.light-gray{background-color:#a7a7a7;}
+.team-arrival td{background-color:#333;}
+.hlt-row td,.hlt-td,.white.selected-team{background-color:#ff9;}
+.error-widget{background:#d84747;}
+.success-widget{background:#51b747;}
+.warning-widget, .session-widget{background:#63b4fb;}
+.fx-header{background-color:#ed2228;}
+.fx-res-status{background-color:#163353;}
+.date-container{background-color:#e0eaf1;}
+.selected-pgm{background-color:#bfddff;}
+.selected-pgm.rest-day{background-color:#fbdada;}
+
+.Weight-Training{background-color:#92e8fc;}
+.Cardio{background-color:#919bfd;}
+.Explosive-Power{background-color:#fd91d1;}
+.Conditioning{background-color:#f4f698;}
+.Agility{background-color:#cdf379;}
+.Core{background-color:#ecee87;}
+.Rehab{background-color:#af6ce3;}
+.Flexibility{background-color:#e3c36c;}
+.Endurance{background-color:#e3826c;}
+.tbl-cell01{background-color:#639002;}
+.tbl-cell02{background-color:#f36af6;}
+.tbl-cell02{background-color:#f36af6;}
+.tbl-cell03{background-color:#00b0f0;}
+.month-view a{background-color:#c9e2ff;}
+
+.pgm-group-list a{background-color:#d6efff;}
+.pgm-group-list a:hover{background-color:#a7dafb;}
+
+.country01 td{background-color:rgb(234, 30, 99,.3);}
+.country02 td{background-color:rgb(104, 57, 183,.3);}
+.country03 td{background-color:rgb(216, 145, 2,.3);}
+.match-container:hover .overlay{background-color: rgba(22, 23, 24, 1);}
+.button-controls .button-container{background-color:rgba(0, 0, 0, 0.72);}
+.login-container{background-color: rgba(0,0,0,.5);}
+.context-menu li a:hover, .context-menu01 li a:hover{background-color: rgba(0,0,0,0.25);}
+.select-role, .overlay{background-color:rgba(0, 0, 0, 0.36);}
+.toggle-btn, .search-icon{background-color:rgba(0, 0, 0, 0.18);}
+.multi-select,.single-select{background-color:rgba(0, 0, 0, 0.7);}
+ul.exersie-parameter-list.execirse-success{background-color:rgba(65, 203, 82,.2);}
+ul.exersie-parameter-list.execirse-pending{background-color:rgba(204, 0, 0,.2);}
+.dashboard-container .input-group-btn .btn, .dashboard-container .event-dtpkr .input-group input, .search-player .search-container .txt-box, .search-player .search-container .close-btn span:nth-child(1), .search-player .search-container .close-btn span:nth-child(2), .editable-field input[type="text"].form-control, .editable-field textarea.form-control, .auto-filer .txt-box, amo-multiselect.form-control,.video-container .overlay,.home-search input.txt-box,.multi-check-search .fa{background-color:transparent;}
+.login-logo{background-clip: padding-box;}
+
+.wlcm-container .user-info, .view-by-icon .fa, .dd-panel .fa, .ico-msgsend, .ico-attach, .ckb input + i, .button-controls a, .context-menu li a, .player-proficiency, .success-header .closed, .error-header .closed, .warning-header .closed,.accordion:after,.ico-32{background-image:url(../images/img-sprite.png);}
+.external-event.match, .fc-event.fa-match{background-image:url(../images/icons/ico-match-w.png);}
+.dashboard-container .event-time-type  .event-type.match{background-image:url(../images/icons/ico-match-48.png);}
+.external-event.practice, .fc-event.fa-practice{background-image:url(../images/icons/ico-practice.png);}
+.dashboard-container .event-time-type  .event-type.practice{background-image:url(../images/icons/ico-practice-48.png);}
+.external-event.strength, .fc-event.fa-strength{background-image:url(../images/icons/ico-strength.png);}
+.dashboard-container .event-time-type  .event-type.strength{background-image:url(../images/icons/ico-strength-48.png);}
+.external-event.fitness, .fc-event.fa-fitness{background-image:url(../images/icons/ico-fitness.png);}
+.dashboard-container .event-time-type  .event-type.fitness{background-image:url(../images/icons/ico-fitness-48.png);}
+.external-event.physio, .fc-event.fa-physio{background-image:url(../images/icons/ico-physio.png);}
+.dashboard-container .event-time-type  .event-type.physio{background-image:url(../images/icons/ico-physio-48.png);}
+.external-event.travel, .fc-event.fa-travel{background-image:url(../images/icons/ico-travel.png);}
+.dashboard-container .event-time-type  .event-type.travel{background-image:url(../images/icons/ico-travel-48.png);}
+.external-event.meeting, .fc-event.fa-meeting{background-image:url(../images/icons/ico-meeting.png);}
+.dashboard-container .event-time-type  .event-type.meeting{background-image:url(../images/icons/ico-meeting-48.png);}
+.external-event.others, .fc-event.fa-others{background-image:url(../images/icons/ico-others.png);}
+.dashboard-container .event-time-type  .event-type.others{background-image:url(../images/icons/ico-others-48.png);}
+.external-event.net-session, .fc-event.fa-net-session{background-image:url(../images/icons/ico-net-session.png);}
+.dashboard-container .event-time-type  .event-type.net-session{background-image:url(../images/icons/ico-net-session-48.png);}
+.pg-date:after{background-image:url(../images/ico-pg-date.png);}
+.performance.increase{background-image:url(../images/icons/increase.png);}
+.performance.decrease{background-image:url(../images/icons/decrease.png);}
+.external-event.no-events{background-image:url(../images/icons/ico-no-events.png);}
+.dashboard-container .event-time-type  .event-type.no-events{background-image:url(../images/icons/ico-no-events-48.png);}
+.add-parameters{background-image:url(../images/add-parameter.png);}
+.event-status{background-image:url(../images/icons/ico-event.png);}
+.ico-accept{background-image:url(../images/icons/ico-accept.png);}
+.ico-reject{background-image:url(../images/icons/ico-reject.png);}
+.ico-pending{background-image:url(../images/icons/ico-pending.png);}
+.stats-team{background-image:url(../images/team-sland.png);}
+.first-place.csk{background-image:url(../images/teams/csk/team-bg.png);}
+.first-place.dd{background-image:url(../images/teams/dd/team-bg.png);}
+.first-place.kxip{background-image:url(../images/teams/kxip/team-bg.png);}
+.first-place.kkr{background-image:url(../images/teams/kkr/team-bg.png);}
+.first-place.mi{background-image:url(../images/teams/mi/team-bg.png);}
+.first-place.rr{background-image:url(../images/teams/rr/team-bg.png);}
+.first-place.rcb{background-image:url(../images/teams/rcb/team-bg.png);}
+.first-place.srh{background-image:url(../images/teams/srh/team-bg.png);}
+/*tnpl logos*/
+.first-place.dld{background-image:url(../images/teams/dld/team-bg.png);}
+.first-place.tp{background-image:url(../images/teams/tp/team-bg.png);}
+.first-place.smp{background-image:url(../images/teams/smp/team-bg.png);}
+.first-place.vbkv{background-image:url(../images/teams/vbkv/team-bg.png);}
+.first-place.rtw{background-image:url(../images/teams/rtw/team-bg.png);}
+.first-place.csg{background-image:url(../images/teams/csg/team-bg.png);}
+.first-place.lkk{background-image:url(../images/teams/lkk/team-bg.png);}
+.first-place.idkk{background-image:url(../images/teams/idkk/team-bg.png);}
+/*india logos*/
+.first-place.india{background-image:url(../images/teams/india/team-bg.png);}
+.login-background{background-image:url(../images/login-bg.jpg);}
+/*bigbash logos*/
+.first-place.as{background-image:url(../images/teams/bigbash/as/team-bg.png);}
+.first-place.bh{background-image:url(../images/teams/bigbash/bh/team-bg.png);}
+.first-place.hh{background-image:url(../images/teams/bigbash/hh/team-bg.png);}
+.first-place.ms{background-image:url(../images/teams/bigbash/ms/team-bg.png);}
+.first-place.ps{background-image:url(../images/teams/bigbash/ps/team-bg.png);}
+.first-place.rg{background-image:url(../images/teams/bigbash/rg/team-bg.png);}
+.first-place.ss{background-image:url(../images/teams/bigbash/ss/team-bg.png);}
+.first-place.st{background-image:url(../images/teams/bigbash/st/team-bg.png);}
+
+.injury-report .human-front{background-image:url(../images/human-front.png);}
+.injury-report .human-back{background-image:url(../images/human-back.png);}
+
+.fx-container:before{background:url(../images/fx-left-bg.png) center center no-repeat;}
+.fx-container:after{background:url(../images/fx-right-bg.png) center center no-repeat;}
+.fx-match-details:before{background:url(../images/ico-ground.png) center center no-repeat;}
+.event-type, .external-event.match, .event-time-type  .event-type.match, .fc-event.fa-match, .view-by-icon .fa,
+.dd-panel .fa, .button-controls a, .context-menu li a, .stats-team, .first-place, .success-header .closed, .error-header .closed,
+.warning-header .closed,.login-background,.performance.increase,.performance.decrease,.human-front,.human-back{background-repeat:no-repeat;}
+
+.login-background{background-size:100%;}
+.stats-team,.login-background{background-position:100% 100%}
+.human-front,.human-back{background-position:50% 50%}
+.ico-add{background-position:0 -190px;}
+.accordion:after{background-position:-4px -194px;}
+.accordion.active:after{background-position:-292px -194px;}
+.ico-edit{background-position:-32px -190px;}
+.ico-delete{background-position:-96px -190px;}
+.ico-update{background-position:-64px -190px;}
+.view-by-icon .fa.fa-match, .dd-panel .fa.fa-match{background-position:0 -128px;}
+.view-by-icon .fa.fa-practice, .dd-panel .fa.fa-practice{background-position:-35px -128px;}
+.view-by-icon .fa.fa-strength, .dd-panel .fa.fa-strength{background-position:-70px -128px;}
+.view-by-icon .fa.fa-fitness, .dd-panel .fa.fa-fitness{background-position:-105px -128px;}
+.view-by-icon .fa.fa-physio, .dd-panel .fa.fa-physio{background-position:-140px -128px;}
+.view-by-icon .fa.fa-travel, .dd-panel .fa.fa-travel{background-position:-175px -128px;}
+.view-by-icon .fa.fa-meeting, .dd-panel .fa.fa-meeting{background-position:-210px -128px;}
+.view-by-icon .fa.fa-others, .dd-panel .fa.fa-others{background-position:-245px -128px;}
+.remove-input-field{background-position:-256px -163px;}
+.view-by-icon .fa.fa-net-session, .dd-panel .fa.fa-net-session{background-position:-280px -128px;}
+.view-by-icon .fa.fa-all, .dd-panel .fa.fa-all{background-position:-315px -128px;}
+.ico-pdf{background-position:-320px -450px;}
+
+.ckb > input + i{background-position:0 -163px;}
+.ckb > input:checked + i{background-position:-16px -163px;}
+.ico-most-runs{background-position:-350px -128px;}
+.ico-high-score{background-position:-385px -128px;}
+.ico-strike-rate{background-position:-420px -128px;}
+.ico-high-avg{background-position:-455px -128px;}
+.ico-most-sixes{background-position:-490px -128px;}
+.ico-most-fours{background-position:-525px -128px;}
+.ico-most-50{background-position:-560px -128px;}
+.ico-most-100{background-position:-595px -128px;}
+.ico-fast-50{background-position:-630px -128px;}
+.ico-fast-100{background-position:-665px -128px;}
+
+.ico-most-wkts{background-position:-700px -128px;}
+.ico-best-avg{background-position:-735px -128px;}
+.ico-best-econ{background-position:-770px -128px;}
+.ico-best-sr{background-position:-805px -128px;}
+.ico-runs-conceded{background-position:-840px -128px;}
+.ico-dot-balls{background-position:-875px -128px;}
+.ico-maiden-over{background-position:-910px -128px;}
+.ico-msgsend{background-position:-225px -191px;}
+.ico-attach{background-position:-257px -191px;}
+.wlcm-container .user-info{background-position:0 -230px;}
+.success-header .closed, .error-header .closed, .warning-header .closed{background-position:0 -290px;}
+
+.player-proficiency.batsman{background-position:0 -310px;}
+.player-proficiency.all-rounder{background-position:-16px -310px;}
+.player-proficiency.bowler{background-position:-32px -310px;}
+.player-proficiency.keeper{background-position:-48px -310px;}
+
+.button-controls .ico-play{background-position:0 -450px;}
+.button-controls .ico-pause{background-position:-32px -450px;}
+.button-controls .ico-prev-frame{background-position:-64px -450px;}
+.button-controls .ico-next-frame{background-position:-96px -450px;}
+.button-controls .ico-fast-bkwd{background-position:-128px -450px;}
+.button-controls .ico-fast-fwd{background-position:-160px -450px;}
+.button-controls .ico-prev{background-position:-192px -450px;}
+.button-controls .ico-next{background-position:-224px -450px;}
+.button-controls .ico-full-screen{background-position:-256px -450px;}
+.button-controls .ico-normal-screen{background-position:-288px -450px;}
+
+.event-time-type  .event-type, .dashboard-container .event-time-type  .event-type.match, .first-place{background-position:50% 50%;}
+
+strong, small, .alert-popup .title, .msg-unread *, h1, h2, h4, .select-category span, .dd-panel span, .element-item .player-name, .msg-header, .editable-header, .profile-info *, .sub-title, .stats-value, .scorecard-page .result-video a, .player-kpi .player-name, .kpi-total .player-stats, .runs, .success-header, .error-header, .warning-header, .session-header,.team-size,.nutrition-header,.nutrition-footer,.player-injury p,.injury-details p,.injury-details li, .overall-match, .tmt-value,.video-caption,.five-col .first-place .total-score,.fx-time,.rest-day li,.pg-inner-title,.pg-day,.exercise-name,.game-name{font-family:QuicksandBold;}
+.alert-popup .msg-received{font-family:SourceSansItalic;}
+
+.login-title h1{font-size:63px;}
+.kpi-total .player-stats,.team-size,.overview-body p.team-size,.fx-score{font-size:26px;}
+.login-title h1 span, .runs, .overview-body p:nth-child(1), .first-place .player-name, .first-place .total-score, .win-loss,.bowl-count,.dtp .dtp-close>a,.video-caption{font-size:24px;}
+.teams-type,.player-injury p,.injury-details p,.arrow-btn .fa,.view-chart .fa,.pgm-view-style .main-tab a .fa,.game-name{font-size:20px;}
+.fa-bell-o, h1, .msg-group a, .profile-info  h4, .stats-value,.team-player .owl-nav .fa,.matches .owl-nav .fa,.owl-nav .fa,.btm-bg,.stats-table .thead, .overall-match, .tmt-value,.fx-status,.fx-team-name,.pgm-view .fa,.document-item .doc-action .fa,.document-item .doc-action2 .fa{font-size:18px;}
+.toggle-btn .fa, .search-icon .fa, .theme-switch .fa, .logout .fa, .msg-header, .player-kpi .player-name, h4, .overview-header, .block-container .first-place .player-name,.left-menu .fa,.nutrition-header,.injury-details li,.overview-footer strong,.action-edit .fa,.competition-name,.five-col .first-place .total-score,.fx-date *,.fx-time,.video-ico .fa,.back-arrow .fa,.action-btn .fa,.pg-inner-title,.pg-day,.selected-pgm a.remove-pgm,a.pgmlist-move .fa,.normal-table td.action .fa{font-size:16px;}
+.accordion{font-size:15px;}
+.alert-popup .title, .jdash-header *, h2, .profile-popup li.listings .fa, .events-view p *, .profile-info *, .secondary-tab a, .sub-title, .stats-label, .wellness-label, .scorecard-page .result-video a, .fielding-summary a, .team-container p, .h2h-comparison .overview-header, .main-tab a, .msg-section li a, .profile-popup li .dw-user-box .u-text p, .player-kpi .player-profession, .player-name, .success-header, .error-header, .warning-header, .session-header,.login-controls .form-control,.basic-info, .plan-tab a,.fx-res-status,.fx-venue,.rest-day li,.match-details-page .normal-table strong,.pg-date,.exercise-name,.page-tab a{font-size:14px;}
+.search-player .secondary-tab a, .common-legend-container .ckb, .normal-table .table-hdr *, .stas .form-control, .overview-header span, .overview-body p, .plan-tab a,.five-col .first-place .player-name{font-size:13px;}
+.editable-header, .btn, .success-widget p, .error-widget p, .warning-widget p, .session-widget p, amo-multiselect .btn{font-size:12px;}
+.pgm-name span, .form-control, .btn-group-multiselect .dropdown-toggle .text{font-size:11px;}
+header .badge, .editable-count{font-size:10px;}
+
+strong, .badge, .left-menu .nav li a, .login-container .link-btn,.scrollable-table thead th,.planner-table thead th,.ag-header-cell-text,.watchlist-table th{font-weight:normal;}
+.select-category span, .dd-panel span, .login-title h1, .login-title span,.uib-dropdown-menu small,.overview-footer strong,.watchlist-table th,.watchlist-table th *,.fx-status,.fx-team-name,.filter-header,.pg-day,ul.notif-widget a.odmslogin,.game-name{text-transform:uppercase;}
+
+.login-container .link-btn, .toggle-btn *, .select-role, .select-role option, .user-info *, .search-icon .fa, .logout .fa, .theme-switch .fa, .alert-popup .alert-no, .left-menu .nav li a, .planner-left .btn .fa, .fc-today-button, .select-category *, .dd-panel *, .modal-header *, .uib-datepicker table thead th.text-center *, .uib-datepicker-popup.dropdown-menu .btn-default.active *, .datetime-picker-dropdown.dropdown-menu .btn-default.active *, .search-player *, .search-player a:hover, .search-player a:focus, .search-player  .secondary-tab a, .search-player  .secondary-tab a:hover, .search-player  .secondary-tab a.select, .player-availability, .msg-header, .msg-header .action-btn, .msg-header .action-btn .fa, .editable-header, .msg-group a .fa, .outgoing-msg, .outgoing-msg *, .profile-popup li .dw-user-box .u-text .btn, .normal-table .table-hdr *, .percent, .match-center-page h4, .scorecard-page .result-video a.select, .sub-title.red, .sub-title.green, .third-tab a.select, .wrapper .more-btn, .countdown .blue, .dd-panel.normal a:hover, .dd-panel.slim a:hover, .view-by-icon span, .common-legend-container .ckb, .fc-event .fc-content *, .overview-header, .overview-header span, .first-place *, .success-header, .error-header, .warning-header, .session-header, .error-widget .fa, .success-widget .fa, .warning-widget .fa, .session-widget .fa,.team-arrival *,.teams-type,.btm-bg,.overview-footer a.player-fitness,.dashboard-page .widget-title h2, .video-container .overlay p,.stats-page .match-container .venue td,.multi-select a.select,.multi-select a:hover,.single-select a.select,.single-select a:hover,.scrollable-table thead th,.scrollable-table thead th *,.left-menu .fa,.nutrition-footer,.bowl-type,.dtp-header *,.dtp-date *,.dtp div.dtp-actual-maxtime *,.tournament-player *,.tournament-player .secondary-tab a, .single-container a.select, .tournament-container .tmt-name, .plan-tab a,.planner-table thead th,.plr-legend,.competition-name,.tournament-view a.select .fa,.ag-header-cell-text, .scrollable-table .table-hdr *,.arrow-btn .fa,.fx-header *,.fx-res-status,.login-title *,.upload-btn,.video-container figcaption .video-title,.video-ico .fa,.back-arrow .fa,.session-link *,.action-btn .fa,.dp-arrow a,.run-counts span,.main-nutrition .nr-title,.main-nutrition .nr-title .fa,.filter-header,.home-search input.txt-box,.home-search .fa,a.view-more .fa,.pgm-table tr.hdr-row td,
+.accordion-view .accordion,.pg-title,.pg-parameter tr.hdr-row td,.day-date div,.accordion span,.pgm-status,.pgm-deviation,.modal .pg-report h5,.selected-pgm a.remove-pgm,.pgm-view-style .main-tab a.select .fa,ul.pgm-list-item li,a.pgmlist-move .fa,.remove-exercise,.remove-exercise:hover,.month-view a.select,.upload-list a.file-caption,.game-name,a.add-new,a.add-new:hover{color:#fff;}
+.alert-popup .msg-received, .secondary-tab a, .doc-caption a, .doc-caption a:hover, .gray, .plan-tab a,.page-tab a{color:#666;}
+.secondary-tab a:hover, .secondary-tab a.select,.overview-footer strong,.modal-body h5, .plan-tab a:hover, .plan-tab a.select,.page-tab a.select{color:#29b6f6;}
+.page-title .secondary-tab a:hover, .page-title .secondary-tab a.select{color:#ec750e;}
+.editable-field *, .msg-group a.select .fa, .msg-log, .dd-panel.slim input{color:#333;}
+.how-out,.how-out *,.how-out a:hover{color:#a7a0a0;}
+.team-arrival .result{color:#ff0;}
+.home-search .txt-box::-webkit-input-placeholder{color:#e9e9e9;}
+.pgm-view-style .main-tab a .fa{color:#c7c7c7;}
+a, .msg-section li a, .scorecard-page .result-video a,.player-injury p,.injury-details p,.fx-venue,.normal-table .table-hdr .editable-input{color:#222;}
+a:hover{color:#0b30bb;}
+.txt-color01{color:#3f51b5;}
+.txt-color02{color:#4cb050;}
+.txt-color03{color:#143a5f;}
+.txt-color04{color:#ea1e63;}
+.txt-color05{color:#ffff00;}
+.txt-color06{color:#5b00f1;}
+.wish-list.select .fa{color:#ff4081;}
+.overview-header.playername,.multi-select a,.single-select a{color:#222;}
+.login-container .link-btn:hover{color:#ff0;}
+.runs, .match-venue,.team-player .owl-nav .fa,.matches .owl-nav .fa{color:#0667d6}
+.error-widget{color:#665252;}
+.success-widget{color:#556652;}
+.warning-widget, .session-widget{color:#4c8ac0;}
+.action-edit .fa,.status-down{color:#da2626;}
+.action-edit.updated .fa{color:#55ce63;}
+.status-up{color:#41cb52;}
+.status-neutral{color:#ffa434;}
+.user-login.form-control:focus, .user-pwd.form-control:focus{color:#0767d5;}
+.pg-inner-title{color:#ad0909;}
+.view-chart .fa{color:#de0181;}
+#event-modal .close-btn .fa,.file-remove .fa{color:#cc0000;}
+a.edit-inactive .fa{color: #ff0303;}
+a.edit-record .fa{color: #0667d6;}
+.document-item .doc-action .fa,.document-item .doc-action2 .fa{color: #ff0000;}
+
+.incoming-msg:after, .outgoing-msg:after{border:7px solid transparent;}
+.profile-img{border:4px solid #c65c44;}
+.view-by-icon:after, .main-tab a:after{border:4px solid transparent;}
+.event-time-type, .search-player .search-container, .search-player .player-photo, .pgm-listings .pgm-list, .editable-container, .draggable-widget, .events-detail-container, .player-container .player-photo, .doc-caption, .wrapper .group-container, .common-legend-container,table.pg-table td,.exercise-preview,.parameter-widget{border:1px solid #ddd;}
+.input-group-btn .btn-default, .auto-filter, amo-multiselect button.btn,.dashboard-container.dashboard-page .input-group .form-control,.dashboard-container.dashboard-page .input-group-btn .btn-default,.switch-btn,.uib-dropdown-menu .dropdown,.planner-table td,.custom-txt-box a,.drag-here,.pg-container,.upload-list,.document-preview-container{border:1px solid #ccc;}
+.planner-table thead th{border:1px solid #81b4d4;}
+.assign-pgm-list{border:1px solid #a2b38a;}
+.nutrition-container{border:1px solid #d6d6d6;}
+.dashboard-container .event-time-type:hover, .uib-datepicker-popup .btn-default:hover, .uib-daypicker .btn-default:hover{border:1px solid #95bde0;}
+.bg-img.match, .event-time-type.match,.selected-pgm{border:1px solid #039cfd;}
+.selected-pgm.rest-day{border-color:#946262;}
+.bg-img.practice, .event-time-type.practice{border:1px solid #ff7aa3;}
+.bg-img.strength, .event-time-type.strength{border:1px solid #f1b53d;}
+.bg-img.fitness, .event-time-type.fitness{border:1px solid #aa6708;}
+.bg-img.physio, .event-time-type.physio{border:1px solid #5cb85c;}
+.bg-img.travel, .event-time-type.travel{border:1px solid #31b0d5;}
+.bg-img.meeting, .event-time-type.meeting{border:1px solid #ec971f;}
+.bg-img.others, .event-time-type.others{border:1px solid #4f2577;}
+.action-btn a:hover{border:1px solid #ad363c;}
+.match-container table{border:1px solid #aacef7;}
+.overview-container .overview-body{border:1px solid #aacef7}
+.bg-img.net-session{border:1px solid #d9534f;}
+.overall-match{border:1px solid #fff;}
+.fx-vs-team{border:1px solid #333}
+.user-login.form-control, .user-pwd.form-control{border:1px solid #7a7a7a;}
+.user-login.form-control:focus, .user-pwd.form-control:focus{border:1px solid #0767d5;}
+.filter-inputs .form-control{border:1px solid #29b6f6;}
+ul.exersie-parameter-list{border:1px solid #ccc;}
+ul.exersie-parameter-list.execirse-success{border:1px solid #41cb52;}
+ul.exersie-parameter-list.execirse-pending,.file-remove{border:1px solid #cc0000;}
+.uib-datepicker-popup.dropdown-menu .btn-default.active, .datetime-picker-dropdown.dropdown-menu .btn-default.active, .search-player .search-container .txt-box, .custom-cmb select, .editable-field input[type="text"].form-control, .editable-field textarea.form-control, .editable-field input[type="text"].form-control:focus, .editable-field textarea.form-control:focus, .auto-filter .txt-box, .dropdown-menu.context-menu,.modal-dialog .modal-content,.ui-state-active, .ui-widget-content .ui-state-active,table.pg-table .form-control,.assign-pgm-list table.pg-table td,.pgm-view-style .main-tab a.select,.pgm-view-style .main-tab a:hover,.pgm-view-style .main-tab a.select:after,.pgm-view-style .main-tab a:hover:after,.input-field{border:0;}
+.view-by-icon:after{border-top:4px solid #fff;}
+/* .login-container{border:3px solid rgba(0,0,0,.2)} */
+.apt-ss-body .login-container{border:3px solid #8db834;}
+.video-container figcaption{border-top:3px solid #0667d6;}
+.down-arrow{border-top:3px solid #161616;}
+.uib-button-bar{border-top:1px solid #ddd;}
+.bdr-tp{border-top:1px solid #aacef7;}
+.fx-match{border-right:1px solid #fff;}
+.theme-switch{border-right:1px solid rgba(0, 0, 0, 0.36);}
+.group-container.fixtures-container .col-md-6, .group-container.fixtures-container .col-md-5{border-right:1px solid #ddd; border-left:1px solid #ddd;}
+.alert-popup:before, .theme-selector:before{border-right:7px solid transparent;}
+.incoming-msg:after{border-bottom:7px solid #ddd;}
+.outgoing-msg:after{border-bottom:7px solid #45b464;}
+#bat-adv-filter .main-tab{border-bottom:2px solid #ccc;}
+.uib-dropdown-menu .dropdown-menu li,.document-item{border-bottom:1px solid #eee;}
+.nutrition-body li,.activity-parameter li,.h-line{border-bottom:1px solid #d6d6d6;}
+.nutrition-body li:last-child,.training-session .normal-table .row01 table tr td{border-bottom:0;}
+.pg-instruction .sub-title{border-bottom:1px solid rgba(0,0,0,.2);}
+.uib-dropdown-menu .dropdown-menu li:last-child{border-bottom:0;}
+.down-arrow{border-right:3px solid transparent;}
+.border-right{border-right:1px solid #ccc;}
+.bdr-rt{border-right:1px solid #aacef7;}
+.context-menu li, .context-menu01 li{border-right: 1px solid rgba(0, 0, 0, 0.36);}
+.context-menu li:last-child{border-right:0;}
+.alert-popup .title{border-bottom:2px solid #ddd;}
+.page-title, .inner-page-title, .player-title{border-bottom:2px solid #039cfd;}
+.main-tab a{border-bottom:2px solid transparent;}
+.widget-title, h2,.arrow-container,.add-more-title{border-bottom:1px solid #039cfd;}
+.dashboard-page .widget-title,.dashboard-page .widget-title h2{border-bottom:0;} 
+.msg-pane, .news-pane, .msg-section a:hover, .normal-table .row01 td, .normal-table .row02 td, .scrollable-table .row01 td{border-bottom:1px solid #95bde0;}
+.search-player .secondary-tab, .plan-tab{border-bottom:1px solid #fff;}
+.msg-section li a, .participants-table td, .secondary-tab, .sub-title, .divider, .player-container .element-item, .stats-table td, .plan-tab,.template-table td,.pg-parameter tr td,.page-tab{border-bottom:1px solid #ddd;}
+.fielding-summary a{border-bottom:1px solid #c2dff9;}
+.search-player .element-item{border-bottom:1px solid #666;}
+.page-title .secondary-tab, .player-info .stats-table.no-border td{border-bottom:0;}
+.alert-popup:before, .theme-selector:before{border-bottom:7px solid #fff;}
+.secondary-tab a:hover, .secondary-tab a.select, .plan-tab a:hover, .plan-tab a.select,.page-tab a.select{border-bottom:3px solid #29b6f6;}
+.page-title .secondary-tab a:hover, .page-title .secondary-tab a.select{border-bottom:4px solid #ec750e;}
+.logo{border-bottom:1px solid rgba(0, 0, 0, 0.45);}
+.fc-center h2, .widget-title h2, .login-title h1{border-bottom:0;}
+.pg-instruction p,.hlt-info{border-left:4px solid #0667d6;}
+.bg-img.all, .event-time-type.all, .context-menu, .context-menu01{border-left:3px solid #1bb99a;}
+.bg-img.match, .event-time-type.match{border-left:3px solid #039cfd;}
+.bg-img.practice, .event-time-type.practice{border-left:3px solid #ff7aa3;}
+.bg-img.strength, .event-time-type.strength{border-left:3px solid #f1b53d;}
+.bg-img.fitness, .event-time-type.fitness{border-left:3px solid #aa6708;}
+.bg-img.physio, .event-time-type.physio{border-left:3px solid #5cb85c;}
+.bg-img.travel, .event-time-type.travel{border-left:3px solid #31b0d5;}
+.bg-img.meeting, .event-time-type.meeting{border-left:3px solid #ec971f;}
+.bg-img.others, .event-time-type.others{border-left:3px solid #4f2577;}
+.bg-img.net-session, .event-time-type.net-session{border-left:3px solid #d9534f;}
+.down-arrow{border-left:3px solid transparent;}
+.theme-switch, .logout, .context-menu li, .context-menu01 li{border-left:1px solid rgba(255, 255, 255, 0.36);}
+.alert-popup:before, .theme-selector:before{border-left:7px solid transparent;}
+.player-injury{border-right: 1px solid #ccc;}
+.context-menu li:first-child,.custom-txt-box a{border-left:0;}
+.select-role, .dashboard-container .input-group .form-control, .dashboard-container .input-group-btn .btn, amo-multiselect.form-control,input.upload-btn{border:0;}
+.toggle-btn, .search-icon, .alert-popup .alert-no, .user-profile, .profile-popup li .dw-user-box .u-img, .profile-img, .profile-img img, .scorecard-page .result-video a,.availability,.overall-match,.fx-vs-team,.video-ico,.dp-arrow,.ico-hlt,.selected-pgm a.remove-pgm{border-radius:100%;}
+.slider.round{border-radius:34px;}
+.slider.round:before,.remove-exercise{border-radius:50%;}
+.player-availability, .third-tab a,.multi-select a,.single-select a,.uib-dropdown-menu .dropdown,.dashboard-widget .form-control,.dashboard-widget .btn-default,.switch-btn,.login-container .link-btn,.login-controls .btn,.pgm-status,.pgm-deviation,.exercise-type{border-radius:20px;}
+.pgm-bar,.pgm-value{border-radius:10px;}
+.assign-pgm-list{border-radius:5px;}
+.doc-caption a, .player-style, .single-container a,.action-btn,ul.exersie-parameter-list{border-radius:3px;}
+.run-counts span,.home-search .auto-filter,a.pgmlist-move,.month-view a{border-radius:2px;}
+.form-control, amo-multiselect button.btn,.modal-dialog .modal-content,.multi-check-search .auto-filter{border-radius:0;}
+
+.filter-header{border-top-right-radius:3px;}
+.filter-header{border-top-left-radius:3px;}
+.pgm-value{border-top-right-radius:0;}
+.pgm-value{border-bottom-right-radius:0;}
+
+.wlcm-container>ul>li, .theme-switch, .alert-popup-pane .icons, .alert-popup-pane .msg-txt, .alert-popup-pane .msg-received, .planner-left, .planner-right, .search-player .search-icon, .search-player .search-panel, .search-player .player-photo, .search-player .player-details, .draggable-widget, .editable-field.editable-hdr, .editable-field.editable-value, .msg-left, .msg-right, .incoming-msg, .profile-left, .profile-right, .left-container, .right-container, .player-container .player-photo, .player-img, .player-kpi, .fixtures-page .left, .linear-chart-table .linear-value, .scorecard-page .result-video a, .match-center-left, .match-center-right, .context-menu li, .context-menu01 li,.owl-prev,.switch-btn a,.login-left,.login-right,.team-list-img,.competition-detail,.fx-team-data,.fx-score-vs,.fx-team-name,.fx-team-logo,.fx-teamA-score,.add-more .form-control,.ico-add-more,.session-date-container,.dp-arrow,.custom-txt-box .form-control,.custom-txt-box a,.prm-img-container,.exersie-parameter,ul.exersie-parameter-list,ul.exersie-parameter-list li,.accordion-view,.pg-container,ul.pgm-list-item,ul.pgm-list-item li,.exercise-preview,.exercise-preview-container,.use-properties label,.use-properties input.form-control,.add-parameters,.parameter-widget,.exercise-builder-parameters{float:left;}
+.wlcm-container, .msg-header .action-btn, .outgoing-msg, .player-container .player-details,.owl-next,.uib-dropdown-menu .ace-icon,.flt-right,.fx-teamB-score,.filter-type,.ico-hlt,.add-parameters{float:right;}
+.uib-button-bar .pull-left, .wrapper{float:none !important;}
+
+header, .theme-selector, .search-player, .overlay{position:fixed;}
+.apps-right, .select-category, .select-role, .alert-notification, .external-event, h2, .view-by-icon, .main-tab a, .secondary-tab, .search-player .search-container, .editable-field, .wlcm-container>ul>li, .incoming-msg, .outgoing-msg, .profile-popup li, .wellness-chart-container, .switch, .page-title, .linear-chart, .video-container, .custom-seekbar, .login-container, .sub-title, .match-container, .player-info, .success-header, .error-header, .warning-header, .session-header,.overview-header,.overview, .plan-tab,.fx-left,.fx-container,.fx-time-venue,.fileupload,.fileupload-container,.video-container figcaption,.advfilter-header,.wagonwheel,
+.accordion,.pg-date,.pgm-bar,.pg-exercise,.exercise-preview,.upload-list,.game-header,.page-tab{position:relative;}
+.apps-left, .badge, .alert-popup:before, .theme-selector:before, .dashboard-container .event-dtpkr, .external-event .close-btn, h2 .close-btn, .dd-panel, .view-by-icon:after, .main-tab a:after, .modal-header .close, .search-player .search-container .close-btn span:nth-child(1), .search-player .search-container .close-btn span:nth-child(2), .file, .editable-count, .incoming-msg:after, .outgoing-msg:after, .profile-popup li .fa, .progress-number-mark, .down-arrow, .slider, .slider:before, .page-title .secondary-tab, .common-legend-container .ckb > input, .linear-chart .value01, .linear-chart .value02, .linear-chart .value03, .button-controls, .custom-seekbar span, .login-logo, .sub-title .filter-inputs, .overlay, .overlay-btn, .right .linear-value, .player-style, .error-widget, .success-widget, .warning-widget, .session-widget, .closed,.owl-nav,.availability,.fitness-container,.secondary-tab .overview-footer,.video-caption,.fx-left:before,.fx-container:before,.fx-container:after,.fx-match-details:before,.browse-upoad,.upload-btn,.browse-upload,.video-container figcaption .video-ico,.country-wise,.grd-sector,
+.accordion:after,.pg-date:after,.remove-exercise,.acc-btn,.file-remove,.document-item .linear-value{position:absolute;}
+header.dtp-header{position:static;}
+.pgm-view-style .main-tab a.select,.pgm-view-style .main-tab a:hover{position:initial;}
+
+.alert-popup:before, .theme-selector:before, .view-by-icon:after, .main-tab a:after, .incoming-msg:after, .outgoing-msg:after, .slider:before,.fx-left:before,.fx-container:before,.fx-container:after,.fx-match-details:before,.accordion:after,.pg-date:after{content:'';}
+
+.fileupload-container{opacity:0;}
+
+.apps-left{z-index:101;}
+.search-player, .overlay-btn, .overlay{z-index:10;}
+.alert-popup{z-index:6;}
+header, .dd-panel{z-index:5;}
+.video-container .overlay{z-index:4;}
+.fileupload-container{z-index:2;}
+.common-legend-container,.fitness-container{z-index:1;}
+.video-container video{z-index:0;}
+.owl-nav{z-index:-5;}
+
+.apps-left, header{right:0; left:0;}
+.down-arrow{top:100%;}
+.video-caption{top:50%;}
+.owl-nav{top:46%;}
+.overlay-btn{top:35%;}
+.grd-sector.point,.grd-sector.square-leg{top:85px;}
+.theme-selector{top:50px;}
+.search-player{top:48px;}
+.dd-panel{top:35px;}
+.match-center-scroll .scorecard-pagination .mCSB_scrollTools_horizontal{top:27px;}
+.video-container .overlay{top:25px;}
+amo-multiselect .dropdown-menu{top:20px;}
+.search-player .search-container .close-btn span:nth-child(2){top:15px;}
+.view-by-icon:after{top:14px;}
+.search-player .search-container .close-btn.open span:nth-child(1), .search-player .search-container .close-btn.open span:nth-child(2){top:13px;}
+.activity-config.view-by-icon:after{top:10px;}
+.search-player .search-container .close-btn span:nth-child(1){top:8px;}
+.editable-count,.availability{top:6px;}
+header .badge, .external-event .close-btn, h2 .close-btn, .player-style,.pg-date:after,.file-remove{top:5px;}
+.accordion:after{top:4px;}
+.remove-exercise{top:3px;}
+.profile-popup li.listings .fa,.grd-sector.third-man, .grd-sector.fine-leg{top:2px;}
+.apps-left, header, .wlcm-container .user-info, .slider, .page-title .secondary-tab, .custom-seekbar span, .overlay, .closed, .modal-header .close,.secondary-tab .overview-footer, .plan-tab,.fx-container:after,.fx-match-details:before,.upload-btn,.browse-upload{top:0;}
+.login-logo{top:-68px;}
+.video-ico{top:-24px;}
+.incoming-msg:after, .outgoing-msg:after{top:-14px;}
+.dtp .dtp-close,.country-wise{top:-10px;}
+.alert-popup:before, .theme-selector:before{top:-7px;}
+.dashboard-container .event-dtpkr{top:-5px;}
+.country-wise{right:160px;}
+.grd-sector.long-on{right:110px;}
+.grd-sector.fine-leg{right:70px;}
+.error-widget, .success-widget, .warning-widget, .session-widget{right:50px;}
+.alert-popup:before,.secondary-tab .overview-footer{right:25px;}
+.theme-selector, .dashboard-container .event-dtpkr{right:20px;}
+.grd-sector.mid-wicket,.grd-sector.square-leg{right:18px;}
+.incoming-msg:after{right:15px;}
+.editable-count{right:9px;}
+.view-by-icon:after{right:7px;}
+.closed{right:6px;}
+.external-event .close-btn, h2 .close-btn, .modal-header .close, .player-style,.availability,.accordion:after,.upload-list:hover .file-remove{right:5px;}
+.remove-exercise{right:3px;}
+.slider{right:2px;}
+.search-player, .alert-popup, .profile-popup, .page-title .secondary-tab, .linear-chart .value03, .filter-inputs, .slider, .stats-team, .overlay, .right .linear-value, .overlay,.fx-left:before,.fx-container:after,.upload-btn
+,.pg-date:after{right:0;}
+.file-remove{right:-20px;}
+.grd-sector.cover,.grd-sector.mid-wicket{bottom:64px;}
+.error-widget, .success-widget, .warning-widget, .session-widget{bottom:50px;}
+.slider:before, .filter-inputs{bottom:3px;}
+.apps-left, .progress-number-mark, .slider, .stats-team, .overlay{bottom:0;}
+.lg-video:hover .button-controls{bottom:0 !important;}
+.fitness-container{bottom:-105px;}
+.button-controls{bottom:-42px;}
+.grd-sector.long-off,.grd-sector.long-on{bottom:-12px;}
+.main-tab a:after{bottom:-10px;}
+.video-container .overlay{bottom:auto;}
+.down-arrow,.video-ico{left:50%;}
+.main-tab a:after{left:48%;}
+.login-logo, .overlay-btn{left:35%;}
+.theme-selector:before{left:173px;}
+.grd-sector.long-off{left:100px;}
+.grd-sector.third-man{left:70px;}
+.grd-sector.point,.grd-sector.cover{left:18px;}
+.outgoing-msg:after{left:15px;}
+header .badge, .profile-popup li.listings .fa{left:10px;}
+.slider:before{left:4px;}
+md-checkbox.md-checked .md-icon:after{left:2.66667px;}
+.slider, .custom-seekbar span, .overlay,.fx-container:before,.browse-upload{left:0;}
+.alert-popup, .profile-popup{left:auto;}
+
+.home-search .auto-filter{margin:10px 10px 0 0;}
+.pgm-view-style .main-tab{margin:4px 0 0 0;}
+.parameter-widget{margin:0 5px 5px 0;}
+.login-container{margin:200px auto 10px;}
+md-input-container, md-autocomplete{margin:12px 0;}
+.activity-container,.multi-check{margin:10px 0;}
+.overall-match{margin:5px auto;}
+.wrapper, .common-legend-container{margin:0 auto 5px;}
+.doc-img{margin:0 auto 15px;}
+.profile-img, .win-percentage{margin:30px auto 0;}
+.associate-logo img{margin:22% auto;}
+.draggable-widget{margin:1%;}
+.linear-chart-table p, .success-widget p, .error-widget p, .warning-widget p, .session-widget p,.team-arrival p,.overview-footer a.player-fitness,.accordion h5,a.pgmlist-move .fa{margin:0;}
+.dashboard-container .event-time-type  .event-type, .error-widget, .success-widget, .warning-widget, .session-widget{margin:10px;}
+.fc-event-container .fc-event{margin:1px;}
+.mrg-tb10{margin:10px 0;}
+.element-item .player-name{margin:7px 0;}
+.fx-res-status{margin:15px 20px 0;}
+.uib-dropdown-menu .dropdown,.multi-select,.single-select{margin:5px 0 10px;}
+ul.exersie-parameter-list{margin:0 5px 10px;}
+.toggle-btn, .search-icon{margin:7px 0 0 5px;}
+.notif-widget .toggle-btn,.notif-widget .search-icon{margin:0 0 0 5px;}
+.pgm-list, .editable-widget,.team-reports a,.overview-footer a, .single-container a,.pgm-status,.pgm-deviation{margin:5px;}
+.user-profile{margin:7px 0 0 10px;}
+.training-date-container{margin:10px 0;}
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical, .logo img, .player-info h4,.modal-body h5{margin:5px 0;}
+.parameter-log .form-control{margin:3px 0;}
+.alert-popup .icons{margin:0 5px;}
+.normal-table td.action .fa{margin:0 3px;}
+.secondary-tab a, .plan-tab a,.run-counts span,.month-view a,.page-tab a{margin:0 2px;}
+.player-info h5{margin:0;}
+.view-fifth .mask{margin-top:46px;}
+.kpi-total .player-stats,.use-properties{margin-top:40px;}
+.first-place .player-name, .first-place .total-score,.mrg-top25,.mt25{margin-top:25px;}
+.wagonwheel-container .common-legend-container,.mt20{margin-top:20px;}
+.status-info,.injury-details ul,.parameter{margin-top:18px;}
+.incoming-msg, .outgoing-msg, .divider, .fixtures-page .countdown, .wrapper .btn-container, .block-container .first-place .player-name, .block-container .first-place .total-score,.login-title h1 span,.pgm-chart{margin-top:15px;}
+/*h1, .select-category, .search-player .search-icon, .left-container .search-panel, .section-container .form-control, .main-tab, .player-stats-page .white{margin-top:10px;}*/
+h1, .select-category, .search-player .search-icon, .left-container .search-panel, .section-container .form-control, .team-size,.btn-control,.training-plan,.fx-team-name,.soap-note-containe,.mt10,#bat-adv-filter .main-tab,.pgm-group-list{margin-top:10px;}
+.dp-arrow{margin-top:8px;}
+.inner-page-title h1,.view-by-team,a.add-new{margin-top:5px;}
+.back-arrow .fa{margin-top:2px;}
+
+.document-item .linear-chart{margin-top:22px;}
+.login-container .link-btn,.login-controls .btn{margin-top:12px;}
+.select-role, .player-name{margin-top:7px;}
+.page-title .btn-container, .search-player .element-item, .msg-btn, .player-container .element-item, .player-title h1, .partnership-chart .linear-chart, .overview-body p:nth-child(1),.dashboard-page .linear-chart,.dashboard-page .linear-value{margin-top:5px;}
+.dashboard-container .event-time-type  .event-type, .modal-header h1, .modal-body h2, .action-btn .btn-block + .btn-block, .msg-btn .btn-block + .btn-block, h2, input[type=checkbox], .match-center-page h4, label input,.five-col .first-place .player-name,.five-col .first-place .total-score,.btn-radio input{margin-top:0;}
+.planner-left, .msg-left, .wlcm-container, .profile-left, .left-container,.btn-radio label{margin-right:20px;}
+.search-player .player-photo, .player-container .player-photo,.custom-chk-bx md-radio-button,.tournament-player .player-img{margin-right:15px;}
+.select-role, .third-tab a, .player-kpi .fa, .ckb,.overview-footer strong,.team-list-img,.prm-img-container,.view-chart{margin-right:10px;}
+.arrow-btn,.txt-loader{margin-right:8px;}
+.planner-left .fa, .pgm-left .fa, .pgm-right .fa, .msg-left .fa, .msg-btn a, .scorecard-page .result-video a, .ckb > i, .rad, .rad > i, label, label input[type="checkbox"], label input[type="radio"], .error-widget .fa, .success-widget .fa, .warning-widget .fa, .session-widget .fa,.left-menu .fa,.plr-img img,.legend,.ico-pgm,ul.notif-widget a.odmslogin,.exercise-preview{margin-right:5px;}
+.btn-radio input[type=radio]{margin-right:2px;}
+.player-stats-page .left-container{margin-right:0;}
+.search-player{margin-right:-250px;}
+.owl-next{margin-right:-20px;}
+.owl-carousel.training-date .owl-next{margin-right:-12px;}
+.row{margin-right:-5px;}
+.wellness-chart-container{margin-bottom:45px;}
+.team-status .wellness-chart-container, .tmt-teams,.lg-share-demo,.activity-list,.game-container{margin-bottom:30px;}
+.fx-container,.wagonwheel-container{margin-bottom:20px;}
+.profile-img, .player-stats .col-md-3, .divider, .normal-table, .txt-edit-container, .third-tab, .team-logo-img,.team-status,.injury-details .form-control,.tournament-player, .tournament-teams,#video-modal .result-video,.pgm-header,.document-item{margin-bottom:15px;}
+.page-title, .inner-page-title, .main-tab, .dashboard-container .white, .event-time-type, .dashboard-container .event-time-type  .event-name, .main-tab-container, .planner-container .white, .widget-title, .progress-number-mark, .left-container .white, .left-container .form-control, .left-container .input-group-btn .btn, .auto-filter, .section-container .form-control, .section-container .btn, .multiplayer-chart .right-container .white, .match-center-page .white, .stats-page .white, .gallery-page .white, .wrapper .white, .player-stats-page .white, .partnership-chart, .video-container, .login-controls label, .sub-title, .overview-body, .normal-chart-container,.multi-select a,.single-select a,.squad-tracker .form-control,.team-list,.arrow-container,.activity-container .form-control,.training-session,.date-container,ul.rest-day,.txt-editor-container,.filter-header,.accordion-view .accordion,.accordion-form,.pgm-player .form-table,.pg-container,.hlt-info,.pg-list,ul.pgm-list-item,.month-view,.add-more-title,.fileupload,
+.upload-list{margin-bottom:10px;}
+.player-report-page .right-container .third-tab{margin-bottom:6px;}
+.alert-popup .title, h1, .modal-body h2, .search-player .player-photo, .custom-cmb, .editable-container, .profile-popup li.listings, .factors .sub-title,.team-overview-body,.owl-stage-outer,md-radio-button,.multi-check label,.multi-check-inline label, .tournament-filter,.watchlist-page .watchlist-table, .nutrition-container,.wagonwheel-container .ckb,.pg-inner-title,.selected-pgm,.exercise-preview{margin-bottom:5px;}
+.profile-popup li .dw-user-box .u-text p,.tbl-cell01,.tbl-cell02,.tbl-cell03{margin-bottom:2px;}
+ul, .modal-header h1, .events-detail .event-time-type, .widget-title h2, .switch, .match-center-page h4, .ckb, .partnership-chart p, .filter-container .sub-title, .stats-table .wellness-chart-container, label,.overview-header.white,.team-status .overview-body,md-checkbox,.legend-container p,.arrow-container h2,.mb0,.training-session .normal-table,.document-item.ditem{margin-bottom:0;}
+.mb{margin-bottom:3px !important;}
+.secondary-tab a, .plan-tab a,.page-tab a{margin-bottom:-2px;}
+.dropdown-container{margin-left:10%;}
+.match-center-right,md-radio-button .md-label,md-checkbox .md-label{margin-left:20px;}
+.select-role, .pgm-right .pgm-listings .pgm-name, .button-controls a, input[type=range].volume-adjust,.teams-page .match-center-right,.player-stats-page .right-container, .page-title .selector-ctrl{margin-left:10px;}
+.team-logo.left, label input[type="checkbox"]:nth-child(2), label input[type="checkbox"]:nth-child(3),.performance,.tournament-filter,.tournament-view a,.action-btn{margin-left:5px;}
+.msg-header .action-btn .btn,.multi-select a,.single-select a{margin-left:2px;}
+.button-controls a:first-child{margin-left:0;}
+.apps-left{margin-left:-220px;}
+.owl-prev{margin-left:-20px;}
+.owl-carousel.training-date .owl-prev{margin-left:-12px;}
+.row{margin-left:-5px;}
+.overslab-row{margin:0 auto 20px;}
+.column-4, .login-controls,.owl-carousel.team-player,.owl-carousel.matches,.owl-carousel.team-widget,.watchlist-table,#video-modal .modal-dialog,.filter-range-picker,.exercise-parameters-container{margin:0 auto;}
+.profile-popup li .dw-user-box .u-text h4, .team-container p, .overview-container p,.team-status .win-percentage, md-autocomplete md-input-container,.multi-check-search a{margin:0;}
+
+.login-container{padding:63px 10px 22px;}
+.player-stats-container{padding:30px 15px;}
+.fx-data{padding:30px 0;}
+.fx-match-details{padding:25px 0;}
+.msg-right .msg-group, .profile-popup li .dw-user-box{padding:12px 15px;}
+.doc-caption a{padding:12px 10px;}
+.team-name, .team-vs{padding:5px 0 0 5px;}
+.first-place .clearfix div{padding:5px 5px 0 5px;}
+.common-legend-container{padding:8px 8px 6px 8px;}
+.success-header, .error-header, .warning-header, .session-header{padding:5px 5px 5px 10px;}
+.p-tb-10{padding:10px 0;}
+.status-table table.stats-table td{padding:9px 5px;}
+.page-title .secondary-tab a, .plan-tab a{padding:7px 20px;}
+.planner-container .event-time-type, .third-tab a{padding:6px 10px;}
+.accordion-view .accordion,ul.pgm-list-item,.page-tab a{padding:6px 5px;}
+.secondary-tab a, .plan-tab a{padding:5px 20px;}
+.uib-dropdown-menu .dropdown{padding:5px 15px;}
+.alert-popup .title, .profile-popup li .dw-user-box .u-text .btn, .fielding-summary a, .wrapper .more-btn, .match-center-page h4, .h2h-comparison .stats-table td,.teams-type,.team-status .overview-header,.nutrition-footer,table.pg-table td,.month-view a{padding:5px 10px;}
+.uib-dropdown-menu .dropdown-menu .dropdown-menu>li>a{padding:5px 8px;}
+.multi-select a,.single-select a{padding:5px 7px;}
+.dd-panel.normal a, .dd-panel.slim a{padding:5px 6px;}
+.form-table td{padding:5px 5px;}
+.doc-group2{padding:8px 0;}
+.msg-pane, .news-pane, .countdown .blue, .button-controls .button-container,.pg-date,.game-name{padding:5px 0;}
+.exercise-type{padding:3px 8px;}
+.ico-add-more,.pgm-status,.pgm-deviation{padding:3px 0;}
+.team-overview table td,.watchlist-table th,.watchlist-table td{padding:4px 10px;}
+ul.notif-widget a.odmslogin{padding:3px 10px;}
+.player-availability{padding:3px 8px;}
+.toggle-btn, .search-icon, header .badge{padding:3px 6px;}
+.left-menu .nav li a, .normal-table td, .stats-table td, .participants-table td, .sub-title.red, .sub-title.green, .expand-row td , .overview-header, .overview-body p,.planner-table td,.planner-table thead th, .scrollable-table td,.template-table td,table.pgm-table td,a.add-new{padding:3px 5px;}
+.msg-header .action-btn a,.nutrition-body li,.first-place table td,.single-container a,.arrow-btn .fa,.run-counts span,.main-nutrition .nr-title,.pgm-group-list a{padding:2px 5px;}
+.nutrition-header,.activity-parameter li{padding:2px 0;}
+.input-group-btn .btn-default, .dashboard-container.dashboard-page .dashboard-widget .input-group-btn .btn-default{padding:6px 10px 5px;}
+.input-group-btn .btn-default, .dashboard-container.dashboard-page .input-group-btn .btn-default{padding: 5px 5px 0;}
+.alert-popup .alert-no{padding:2px 7px;}
+.uib-datepicker-popup .btn, .uib-daypicker .btn, .form-table td td, amo-multiselect .btn{padding:1px 5px;}
+.team-player,.owl-carousel.matches,.owl-carousel.team-widget{padding:0 30px;}
+.switch-btn a,.login-container .link-btn, .tournament-page .col-md-3,.modal-plan-body  .col-md-6,.modal-plan-body  .col-md-3,.col-md-4.fxe-right{padding:0 15px;}
+.inner-page, .h2h-comparison,.dashboard-widget .form-control,.fx-score-vs,ul.session-date-container li,.date-container{padding:0 10px;}
+.main-tab a, .search-player  .secondary-tab a{padding:0 6px;}
+.dashboard-container .event-dtpkr input, .dashboard-container .event-time-type  .event-time, .dashboard-container .event-time-type  .event-name, .msg-header, .editable-header, .pgm-left, .pgm-right, .pgm-filter>div, .progress-number-mark,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-12,.rest-day .uib-separator,.main-nutrition li{padding:0 5px;}
+select.form-control, .search-player .search-container .txt-box,.upload-btn{padding:0 3px;}
+.md-select-value{padding:0 2px;}
+.overview-body .wellness-chart-container:first-child{padding-top:30px;}
+.dashboard-container .event-time-type  a, .factors,#video-modal{padding-top:10px;}
+.fixtures-venue, .team-logo-name{padding-top:8px;}
+.stats-page .sub-title, .overview-body .chart-container, .tournament-container,.session-link .col-md-8{padding-top:5px;}
+.txt-right .event-time, .txt-right .event-type, .txt-right .event-status{padding-right:22px;}
+.view-by-icon, .editable-field input[type="text"].form-control, .editable-field textarea.form-control,.player-injury{padding-right:15px;}
+.dashboard-container, .match-container table td:nth-child(2),.fx-match,ul.rest-day li{padding-right:10px;}
+.user-info a, .wlcm-container .user-info, .theme-switch, .logout, .pr5,.fx-teamA .fx-team-name{padding-right:5px;}
+.squad-tracker{padding-right:0;}
+.document-item{padding-bottom:12px;}
+.dashboard-container .search-filter, .player-stats .stats-label,.pgm-header{padding-bottom:10px;}
+h2, .uib-datepicker-popup .dropdown-menu, .pgm-filter, .fixtures-date-time, .fixtures-trophy, .team-logo-name,.injury-details li,.arrow-container{padding-bottom:5px;}
+.fx-time{padding-bottom:3px;}
+.search-filter, .fc-center h2,.multi-select,.single-select{padding-bottom:0;}
+.fx-time-venue{padding-left:60px;}
+.profile-popup li.listings{padding-left:30px;}
+.wlcm-container .user-info{padding-left:20px;}
+.profile-popup li .dw-user-box .u-text, .match-container table td:nth-child(3),.fx-full-date{padding-left:10px;}
+.theme-switch, .logout, .pl5,.fx-teamB .fx-team-name{padding-left:5px;}
+.jdash-header .col-md-6, .event-time-type .col-md-8{padding-left:0;}
+.user-login.form-control, .user-pwd.form-control{padding:16px;}
+.player-profile-container, .search-player .search-panel,.squad-tracker{padding:15px;}
+.white, .uib-button-bar, .incoming-msg, .outgoing-msg, .pgm-listings, .training-listings, .events-detail-container, .dd-panel.normal, .dd-panel.slim,.common-container,.dashboard-page .calendar,.multi-select,.single-select,.fx-header,.pg-container{padding:10px;}
+.filter-inputs .form-control,.back-arrow .fa,.pg-title{padding:6px;}
+.modal-header, .modal-body, .modal-footer, .pgm-left .pgm-name, .editable-field, .msg-section a, .msg-log, .msg-log .msg-history, .recepient-filter, .msg-section li a, .participants-detail-container, .player-style, .success-container, .error-container, .warning-container, .session-container,.btm-bg,.bowl-type,.overview-footer a.player-fitness,.animate-reports a,.status-info img,.tournament-player,.tournament-view .fa,.video-container figcaption,.session-link,.filter-header,.pg-parameter tr td,.pg-instruction p,.hlt-info,ul.exersie-parameter-list,.upload-list a.file-caption,.document-preview-container,.document-item.ditem{padding:5px;}
+.form-control, .auto-filter, .team-container p,.team-reports a,.stats-page .stats-team img,.action-btn,.selected-pgm,.parameter-widget{padding:3px;}
+.dashboard-container .input-group-btn .btn, .uib-datepicker-popup, .dropdown-menu, .date-picker-menu, .editable-field.editable-hdr, .editable-field.editable-value, .msg-group .col-md-4, .msg-btn a, .msg-page .white, .pgm-page .white, .fielding-summary, .dropdown-menu.context-menu, .dropdown-menu.context-menu01, .context-menu li a, .context-menu01 li a, .team-container.white, amo-multiselect.form-control,.team-widget .white,.team-status .wellness-chart-container .col-md-5,.dashboard-page .white,.dashboard-page .widget-title h2,.dtp a.dtp-meridien-am, .dtp a.dtp-meridien-pm,.watchlist-table td.p0,.multi-check-search .fa,.pgm-view-style .main-tab a{padding:0;}
+
+.fileupload-container{width:100% !important;}
+header, .sidebar, .view-by-icon, .dd-panel, .dd-panel span, .search-player .element-item, .custom-cmb select, .pgm-list .img-container img, .msg-section li a, .profile-img img, .left-container .form-table, .player-container .element-item, .scorecard-pagination, .team-logo img, .button-controls, .custom-seekbar, .video-container, .chart-design,.uib-dropdown-menu .dropdown-menu,.video-caption,.browse-upload,.lg-share-demo,.lg-share-demo .video-container video,.owl-carousel.training-date .owl-nav,.pg-left .pg-img img,.prm-img-container img,.pgm-bar,.exersie-parameter,.accordion-view,.pg-container,.assign-pgm img,ul.pgm-list-item,.tbl-cell01,.tbl-cell02,.tbl-cell03,.multiselect-search .fs-wrap,.video-document-page .form-table{width:100%;}
+.modal-body .form-table,.playerlist-page .watchlist-table,.client-banner-preview img{width:100%;}
+.owl-nav{width:96%;}
+.fitness-container{width:93%;}
+.form-table,.exercise-parameters-container{width:92%;}
+.selected-pgm label{width:86%;}
+.match-container img{width:80%;}
+.accordion h5{width:75%;}
+ul.exersie-parameter-list li:first-child{width:60%;}
+.column-4,.watchlist-table{width:60%;}
+.editable-field.editable-hdr, .editable-field.editable-value,.login-left,.login-right{width:50%;}
+ul.pgm-list-item li:first-child{width:50%;}
+ul.exersie-parameter-list{width:48%;}
+ul.pgm-list-item li:nth-child(2){width:40%;}
+.fx-team-data,.fx-score-vs{width:33.33%;}
+ul.exersie-parameter-list li{width:20%;}
+.nutrition-page .custom-container .col-md-2{width:14.28%;}
+ul.pgm-list-item li:last-child{width:10%;}
+.player-img img, .doc-img img{max-width:100%;}
+.wrapper{width:1200px;}
+.filter-range-picker{width:500px;}
+.match-center-right,.overslab-row,.program-report .left-container{width:480px;}
+.planner-left, .msg-left, .dd-panel.normal, .profile-left, .left-container, .login-container{width:400px;}
+.teams-page .match-center-right, .player-stats-page .right-container{width:380px;}
+.login-controls{width:310px;}
+.error-widget, .success-widget, .warning-widget, .session-widget,.associate-logo.apt-ss-logo img{width:350px;}
+.alert-popup, .win-percentage,.nutrition-page .left-container,.home-search{width:300px;}
+.profile-popup{width:270px;}
+.search-player, .search-player .search-panel,.associate-logo img{width:250px;}
+.fx-container:before,.fx-container:after{width:230px;}
+.apps-left, .search-player .search-container,.view-by-team{width:220px;}
+.alert-popup .msg-txt, .theme-selector,.tournament-player .dd-panel.normal, .filter-inputs select{width:200px;}
+.search-player .search-container .txt-box{width:190px;}
+.select-role, .dd-panel.slim{width:180px;}
+/* .planner-container .event-time-type  .event-name{width:calc(100% - 220px);} */
+.player-stats-page .left-container{width:calc(100% - 390px);}
+.use-properties input.form-control{width: calc(100% - 275px);}
+.prm-content{width: calc(100% - 160px);}
+.add-more .form-control,.doc-group2{width:calc(100% - 150px);}
+.player-kpi{width: calc(100% - 130px);}
+.tournament-player .player-kpi{width:calc(100% - 100px);}
+.pgm-right .pgm-listings .pgm-name,.competition-detail{width:calc(100% - 74px);}
+.fx-team-name{width:calc(100% - 64px);}
+.team-name{width:calc(50% - 57px);}
+.browse-upload input[type="text"]{width:calc(100% - 51px);}
+.session-date-container{width:calc(100% - 48px);}
+.add-more .form-control,.doc-group{width:calc(100% - 32px);}
+.custom-txt-box .form-control{width:calc(100% - 24px);}
+.input-field{width:calc(100% - 20px);}
+.draggable-widget{width:calc(48% - 2px);}
+.performance-bat,.country-wise{width:192px;}
+.profile-img,.prm-img-container,.exercise-pic{width:150px;}
+/* .planner-container .event-time-type  .event-time{width:140px;} */
+.document-item .doc-action2{width:145px;}
+.use-properties label{width:140px;}
+.player-img{width:130px;}
+.pgm-left .pgm-listings .pgm-list{width:122px;}
+.pgm-left .pgm-list .img-container,.assign-pgm-parameter .draggable-widget,.exercise-preview{width:120px;}
+.login-logo{width:118px;}
+.dashboard-container .input-group, .owl-carousel .owl-item .player-info img,.player-info img,.multi-check-inline,.parameter-widget,.upload-list img,.client-logo-preview img{width:100px;}
+.player-photo{width:90px;}
+.profile-popup li .dw-user-box .u-img, .doc-img, input[type=range].volume-adjust{width:80px;}
+.search-player .player-photo, .player-container .player-photo, .stats-team img, .team-logo-img img,.widget-container .col-md-4 img,.status-info img,.tournament-player .player-img,.overall-match,.team-list-img,.fx-team-logo{width:64px;}
+.five-col .player-photo{width:60px;}
+.switch{width:52px;}
+.search-player .player-details, .player-container .player-details{width:calc(100% - 80px);}
+.alert-popup .msg-received, .pgm-right .pgm-listings .img-container,.watchlist-img{width:50px;}
+.fx-match-details:before,.assign-pgm{width:48px;}
+.team-vs,.watch-value{width:40px;}
+.toggle-btn, .search-icon, .alert-popup .icons, .user-profile,.video-ico{width:36px;}
+.view-by-icon .fa, .dd-panel .fa{width:35px;}
+.ico-32, .team-logo, .button-controls a, .context-menu li a,.overview-footer img,.plr-img img,.fx-vs-team,.ico-add-more{width:32px;}
+.msg-btn a.ico-32 .fa, .scorecard-page .result-video a, .success-header a, .error-header a, .warning-header a, .session-header a,.dtp a.dtp-meridien-am, .dtp a.dtp-meridien-pm,.tournament-filter a{width:30px;}
+.action-btn{width:28px;}
+.search-player .search-icon,.overview-footer .team-reports img,.dp-arrow,.custom-txt-box a,a.view-more .fa,.accordion:after,.drag-here,a.pgmlist-move,.add-parameters,.document-item .doc-action{width:24px;}
+.pg-date:after,.selected-pgm a.remove-pgm,.file-remove{width:20px;}
+.nr-title a{width:18px;}
+.slider:before, .rad > i, .ckb > i, .player-proficiency,md-radio-button .md-container,md-radio-button .md-off, md-radio-button .md-on,md-checkbox .md-container,md-checkbox .md-icon,.ico-hlt{width:16px;}
+.search-player .search-container .close-btn, .search-player .search-container .close-btn span:nth-child(1), .search-player .search-container .close-btn span:nth-child(2), .ico-20{width:20px;}
+.auto-filter .txt-box{width:calc(100% - 18px);}
+.search-player .search-container .close-btn.open span, .ckb input[type=checkbox],.performance,.legend,.watch-status,.remove-exercise{width:16px;}
+.availability,.performance.yellow{width:12px;}
+.five-col .col-md-2{width:20%;}
+.seven-cols .col-md-2{width:14.2857%;}
+md-checkbox.md-checked .md-icon:after{width:6px;}
+.mCSB_scrollTools{width:5px;}
+.fx-left:before{width:1px;}
+.view-by-icon:after, .main-tab a:after, .incoming-msg:after, .outgoing-msg:after{width:0;}
+.linear-value{width:0%;}
+
+.exercise-type{min-width:130px;}
+.dropdown-menu.context-menu{min-width:100px;}
+.switch-btn a{min-width:89px;}
+.wlcm-container .user-info,.switch-min.switch-btn a{min-width:50px;}
+
+
+.scroll-y{max-height:400px;}
+.multi-check-container.scroll-y,.ui-menu,.dd-panel{max-height:300px;}
+#event-modal .modal-body{height:100vh;}
+.wlcm-container .user-info, .msg-header .action-btn .btn, .dropdown-menu.context-menu,.team-status .win-percentage,.dashboard-container.dashboard-page .input-group,.pgm-page .action-btn,.msg-page .action-btn{width:auto;}
+
+.pgm-list .img-container img,.fx-left:before,.fx-container:before,.fx-container:after,.fx-match-details:before,.assign-pgm img{height:100%;}
+/* .mCSB_container{min-height:500px;} */
+.nutrition-wrapper{height:590px;}
+.dashboard-widget{height:400px;}
+.chart-design,.common-container.status-table{height:350px;}
+.parameter-table{height:300px;}
+.video-container{height:285px;}
+.alert-popup-pane, .events-view .events-month, .events-view .events-conflict,ul.document-containert{height:280px;}
+.dd-panel.slim .dd-panel-container{height:250px;}
+.lg-share-demo .video-container video{height:216px;}
+.prm-img-container{height:180px;}
+.multi-select,.single-select{height:160px;}
+.exercise-pic{height:150px;}
+.pgm-list .img-container,.exercise-preview{height:120px;}
+.login-logo{height:118px;}
+.profile-img,.nutrition-container{height:99px;}
+.player-photo{height:90px;}
+.profile-popup li .dw-user-box .u-img{height:80px;}
+.nutrition-body{height:69px;}
+.search-player .player-photo, .player-container .player-photo, .stats-team img,.overall-match,.fx-team-logo{height:64px;}
+.search-player .player-photo img, .player-container .player-photo img{height:62px;}
+.five-col .player-photo{height:60px;}
+.video-container figcaption{height:54px;}
+.team-list-img{height:52px;}
+.pgm-right .pgm-listings .img-container{height:50px;}
+/* .dashboard-container .event-time-type  .event-type, .logo img.landscape,.logo img.portrait{height:48px;} */
+.dashboard-container .event-time-type  .event-type,.assign-pgm{height:48px;}
+.selected-pgm{height:46px;}
+table.pg-table .form-control{height:40px;}
+.toggle-btn, .search-icon, .alert-popup .icons, .user-profile, .user-profile img,.stats-page .match-container .overs,.video-ico,.main-nutrition ul.collapsed,.nutrition-info{height:36px;}
+.select-category, .select-role, .select-role span, .view-by-icon .fa, .dd-panel .fa, .dd-panel.normal .ico-txt span, .dd-panel.slim .ico-txt span, .performance-bat, .performance-bowl,md-input-container.md-block,md-autocomplete,md-autocomplete[md-floating-label],md-autocomplete[md-floating-label] md-autocomplete-wrap{height:35px;}
+.msg-btn a, .ico-32, .team-logo, .button-controls a, .context-menu li a,.fx-vs-team,.upload-list a.file-caption{height:32px;}
+.search-player .search-container, .custom-cmb select, .msg-btn a.ico-32 .fa, .scorecard-page .result-video a, .result-video,.dashboard-widget .form-control,.dtp a.dtp-meridien-am, .dtp a.dtp-meridien-pm,.tournament-filter a{height:30px;}
+.action-btn,.multi-check-search .auto-filter,.home-search .auto-filter,.add-more-title{height:28px;}
+.form-control, .search-player .search-icon, .auto-filter,.browse-upload input[type="text"],.dp-arrow,.custom-txt-box a,a.view-more .fa,.accordion:after,.drag-here,table.pg-table .assign-pgm-parameter .form-control,a.pgmlist-move,.add-parameters{height:24px;}
+.switch{height:22px;}
+.search-player .search-container .close-btn, .ico-20, .success-header a, .error-header a, .warning-header a, .session-header a, .video-container .overlay,.fileupload,.fileupload-container,.browse-upoad,.pg-date:after,.selected-pgm a.remove-pgm{height:20px;}
+.search-player .search-container .txt-box, .btn-group-multiselect .dropdown-toggle .text,.nr-title a{height:18px;}
+.slider:before, .rad > i, .ckb > i, .ckb input[type=checkbox], .player-proficiency,md-radio-button .md-container,md-radio-button .md-off, md-radio-button .md-on,md-checkbox .md-container,md-checkbox .md-icon,.performance,.legend,.ico-hlt,.remove-exercise{height:16px;}
+.availability,.performance.yellow,.tbl-cell01,.tbl-cell02,.tbl-cell03{height:12px;}
+.linear-chart, .linear-value,.pgm-bar,.pgm-value{height:10px;}
+md-checkbox.md-checked .md-icon:after{height:9px;}
+.custom-seekbar, .custom-seekbar span{height:5px;}
+.search-player .search-container .close-btn span:nth-child(1), .search-player .search-container .close-btn span:nth-child(2){height:3px;}
+.view-by-icon:after, .main-tab a, .incoming-msg:after, .outgoing-msg:after{height:0;}
+.incoming-msg img, .outgoing-msg img,.dashboard-page .dashboard-widget,.filter-inputs .form-control,.lg-share-demo .video-container,.modal .video-container,.main-nutrition ul.expanded{height:auto;}
+.assign-program-page .page-container{height:auto !important;}
+
+.video-container .modal-body,.video-container .modal-body video,.exercise-pic img{height:100%;}
+.modal-body{max-height:550px;}
+.success-container, .error-container, .warning-container, .session-container{max-height:300px;}
+.activity-parameter ul{max-height:200px;}
+.archive-container, .participants-detail-container{max-height:180px;}
+.incoming-msg img, .outgoing-msg img{max-height:100px;}
+
+.overview-body{min-height:65px;}
+.h2h-comparison .overview-body, .batting-stats .overview-body, .bowling-stats .overview-body, .fielding-stats .overview-body{min-height:40px;}
+.small-box .overview-body{min-height:20px;}
+.lg-share-demo .video-container{min-height:auto;}
+
+.overall-match{line-height:64px;}
+.msg-group a{line-height:40px;}
+.login-title h1, .login-title span,.add-more-title{line-height:35px;}
+.video-ico .fa{line-height:34px;}
+.toggle-btn, .search-icon, .msg-header,.dashboard-page .widget-title h2,.fx-res-status{line-height:32px;}
+.search-player .search-container, .msg-group .msg-btn a, .scorecard-page .result-video a,.dtp a.dtp-meridien-am, .dtp a.dtp-meridien-pm,.tournament-filter a,.tournament-filter a *,.fx-vs-team{line-height:30px;}
+.switch-btn a,.login-container .link-btn{line-height:28px;}
+.left-menu .nav li a, .modal-header .close, .search-player .search-icon, .msg-section li, .progress-number-mark,.basic-info,input.upload-btn,.action-btn,.dp-arrow,a.view-more .fa,a.pgmlist-move{line-height:24px;}
+.editable-header, .profile-popup li.listings, .fielding-summary a,.uib-dropdown-menu .ace-icon{line-height:22px;}
+.pgm-name span{line-height:18px;}
+.dashboard-widget .btn-default .fa,.selected-pgm a.remove-pgm{line-height:16px;}
+.upload-list a.file-caption{line-height:14px;}
+.remove-exercise{line-height:13px;}
+
+.event-time-type a, .dashboard-container .event-time-type  .event-type, .dashboard-container .event-time-type  .event-name, .dashboard-container .event-time-type  .event-time, .dashboard-container .event-time-type  .event-time-clock, .search-player .search-container .close-btn span:nth-child(1), .search-player .search-container .close-btn span:nth-child(2), .element-item .player-name, .msg-section li a, .msg-group a, .profile-popup li.listings, .fielding-summary a, .doc-caption a, .dd-panel.normal a, .dd-panel.slim a, .wellness-chart-container .linear-value, .normal-chart-container .linear-value, .login-title h1, .login-title span, .login-controls label, .owl-carousel, .owl-carousel.owl-loaded, amo-multiselect .btn-group,.overview-footer a.player-fitness,.uib-dropdown-menu a, .team-status .overview-header span, .tmt-teams .overview-header span,.multi-check label,.fx-score,.fx-overs,.participants-table a,.dp-arrow a,.pgm-group-list a,.exercise-preview-container,.upload-list a{display:block;}
+.toggle-btn, .search-icon, .wlcm-container li a, .alert-popup:before, .theme-selector:before, /*.event-time-type  .event-type, .event-time-type  .event-name, .event-time-type  .event-time, .event-time-type  .event-time-clock,*/ .view-by-icon .fa, .search-player .search-icon, .secondary-tab a, .search-player .search-container .txt-box, .search-player .search-container .close-btn, .msg-header .action-btn .btn, .pgm-left .pgm-listings .pgm-list, .pgm-right .pgm-listings .img-container, .pgm-right .pgm-listings .pgm-name, .user-profile, .incoming-msg, .outgoing-msg, .msg-btn a, .profile-popup li .dw-user-box .u-img, .profile-popup li .dw-user-box .u-text, .profile-popup li .dw-user-box .u-text .btn, .ico-20, .switch, .auto-filer .txt-box, .page-title h1, .ckb > i, .rad > i, .linear-chart-table .linear-value, .linear-value, .button-controls a, input[type=range].volume-adjust, .common-legend-container, .context-menu li a, .filter-inputs select, .third-tab a, .player-proficiency, .success-header a, .error-header a, .warning-header a, .session-header a,.team-arrival p,.overview-footer a,.status-info img,.status-info .team-size,.bat-switch,.multi-select a,.single-select a,.login-container a.link-btn,.login-controls .btn,.secondary-tab .overview-footer *,.custom-chk-bx md-radio-button,.dtp a.dtp-meridien-am, .dtp a.dtp-meridien-pm,.tournament-player .secondary-tab,.tournament-filter a, .single-container a, .page-title .selector-ctrl, .page-title .selector-ctrl *, .plan-tab a,.performance,.plr-img,.tournament-hdr *,.legend-container *,.tournament-view,.watch-value,.watch-status,.arrow-container h2,.fx-score-vs,.fx-score-info,.fx-vs-team,.lg-share-demo .video-container a,.action-btn,ul.session-date-container li,.rest-day li,.home-search,.filter-type,.multi-check-type,.drag-here,.ico-pdf,.view-by-team,.ico-hlt,.accordion h5,.prm-img-container,.prm-content,.exercise-pic,ul.exersie-parameter-list,.ico-pgm,a.pgmlist-move,.exercise-type,.exercise-preview,.input-field,.remove-input-field,a.add-new,.document-item .doc-action,.doc-group,.page-tab a,.document-item .doc-action2,.doc-group2{display:inline-block;}
+.context-menu li, .context-menu01 li{display:inline-flex;}
+.video-container figcaption,ul.rest-day,.selected-pgm,ul.notif-widget,ul.pgm-list-item,.parameter-widget,.upload-list a.file-caption{display:flex;}
+.video-container{display:inline-grid}
+.view-by-icon, .dd-panel a{display:table;}
+.dd-panel span, .pgm-name span{display:table-cell;}
+.alert-popup, .theme-selector, .profile-popup, .archive-container, .dd-panel, .switch input, .owl-dots,.video-display{display:none;}
+.match-center-scroll .mCSB_scrollTools_horizontal,.vjs-control-bar{display:none !important;}
+.match-center-scroll .scorecard-pagination .mCSB_scrollTools_horizontal, .error-widget, .success-widget, .warning-widget, .session-widget{display:block !important;}
+
+.video-container figcaption,ul.rest-day,.selected-pgm,ul.notif-widget,ul.pgm-list-item,.parameter-widget,.upload-list a.file-caption{align-items:center;}
+ul.rest-day,.upload-list a.file-caption{justify-content:center;}
+
+.file, .common-legend-container .ckb > input,.ckb > input{visibility:hidden;}
+.ui-menu{overflow-y:auto !important;}
+.pgm-listings, .success-container, .error-container, .warning-container, .session-container,.common-container.status-table,.multi-select,.single-select,.modal-body,.nutrition-body,.nutrition-wrapper,.activity-parameter ul,.multi-check-container,.dd-panel,ul.document-containert{overflow-y:auto;}
+.video-container .modal-body{overflow-y:initial;}
+.pgm-list .img-container, .user-profile, .msg-section li a, .profile-popup li .dw-user-box .u-img, .profile-img, .video-container,.overview,.switch-btn,.overall-match,.team-list-img,.player-photo,.fx-team-logo,.lg-share-demo,.lg-share-demo .video-container video,.main-nutrition ul.collapsed,.nutrition-info,.prm-img-container,.exercise-pic,.selected-pgm,.assign-pgm,.exercise-preview,.upload-list{overflow:hidden;}
+
+/*.event-name, */.players-list a span.player-name, .msg-section li a{text-overflow:ellipsis; white-space:nowrap;}
+
+.dashboard-widget .event-dtpkr .input-group-btn .btn-default .fa-calendar{vertical-align:initial;}
+.theme-switch .fa, .logout .fa, .planner-container .event-time-type  .event-type, .planner-container .event-time-type  .event-name, .planner-container .event-time-type  .event-time, .planner-container .event-time-type  .event-time-clock, .view-by-icon .fa, .view-by-icon span, .dd-panel .fa, .dd-panel span, .msg-header .action-btn .btn, .pgm-name span, .msg-btn a, input[type=checkbox], .ckb > i, .rad > i, .linear-value, .button-container *, .filter-inputs *, .player-proficiency, .login-container a.link-btn,.dashboard-page .widget-title h2, label input[type="checkbox"], label input[type="radio"],.modal-body .planner-table td,span.performance,.legend-container .legend,.team-list *,.ico-hlt,.doc-group{vertical-align:middle;}
+.pgm-right .pgm-listings .img-container, .editable-hdr, .editable-value, .editable-hdr *, .editable-value *, .profile-popup li .dw-user-box .u-img, .ckb > input + i, .event-dtpkr .input-group-btn .btn-default .fa-calendar, .btn-default .fa-calendar, .btn-default .fa-search,.dashboard-container.dashboard-page .input-group-btn,.modal-body td{vertical-align:top;}
+.arrow-btn .fa:hover{background-color:#3db9dc;}
+
+.scrollable-table thead,.planner-table thead,.ag-header-cell,.watchlist-page .watchlist-table .table-hdr,.arrow-btn .fa,.session-link,.action-btn.btn-edit,.dp-arrow,.match-details-page .normal-table .table-hdr,.main-nutrition .nr-title,.pgm-table tr.hdr-row td,.accordion-view .accordion,ul.pgm-list-item,.game-header{background-color:#0667d6;}
+.scrollable-table tbody td{font-size:13px;}
+.col10{width:10px; min-width:10px;}
+.col20{width:20px; min-width:20px;}
+.col30{width:30px; min-width:30px;}
+.col40{width:40px; min-width:40px;}
+.col50{width:50px !important; min-width:50px !important;}
+.col50{max-width:50px !important;}
+.col60{width:60px; min-width:60px;}
+.col68{width:68px; min-width:68px;}
+.col70{width:70px; min-width:70px;}
+.col80{width:80px; min-width:80px;}
+.col90{width:90px; min-width:90px;}
+.col95{width:95px; min-width:95px;}
+.col100{width:100px; min-width:100px;}
+.col110{width:110px; min-width:110px;}
+.col120{width:120px; min-width:120px;}
+.col125{width:125px; min-width:125px;}
+.col130{width:130px; min-width:130px;}
+.col135{width:135px; min-width:135px;}
+.col150{width:150px; min-width:150px;}
+.col170{width:170px; min-width:170px;}
+.col190{width:190px; min-width:190px;}
+.col200{width:200px; min-width:200px;}
+.col230{width:230px; min-width:230px;}
+.col250{width:250px; min-width:250px;}
+.col300{width:300px; min-width:300px;}
+.col320{width:320px; min-width:320px;}
+.col350{width:350px; min-width:350px;}
+.col400{width:400px; min-width:400px;}
+.col450{width:450px; min-width:450px;}
+.col500{width:500px; min-width:500px;}
+.col700{width:700px; min-width:700px;}
+.scrollable-table .table thead{display:table; width:100%; border-bottom:1px solid #81b4d4;}
+.scrollable-table .table tbody tr{display:table; width:100%;}
+.scrollable-table .table>thead>tr>th, .approval-table tbody td, .scrollable-table .table>tbody tr>td {word-break: break-word;}
+.scrollable-table .table>thead>tr>th, .approval-table tbody td, .scrollable-table .table>tbody tr>td {vertical-align:middle;}
+.scrollable-table .table>thead>tr>th,.arrow-container h2{border-bottom:0;}
+.scrollable-table .table>thead>tr>th{padding:5px 8px;}
+.scrollable-table .table.calendar>thead>tr>th,.scrollable-table .table.calendar td{padding:3px;}
+.watch-list .scrollable-table .table tbody{max-height:600px; overflow:auto;}
+.scrollable-table .table tbody.custom-scroll{max-height:100%; overflow:auto;}
+.scrollable-table .table tbody{max-height:300px; overflow:auto;}
+.scrollable-table .table tbody{display:block}
+.scrollable-table .table td{border-right:1px solid #81b4d4;}
+.scrollable-table .table td{border-bottom: 1px solid #81b4d4; border-left: 1px solid #81b4d4; padding: 2px 8px;}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{border:0;}
+
+.grd-sector.third-man{
+	-ms-transform: rotate(-26deg);
+    -webkit-transform: rotate(-26deg);
+    transform: rotate(-26deg);
+}
+.grd-sector.point{
+	-ms-transform: rotate(-72deg);
+    -webkit-transform: rotate(-72deg);
+    transform: rotate(-72deg);
+}
+.grd-sector.fine-leg{
+	-ms-transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+.grd-sector.square-leg,.grd-sector.cover{
+	-ms-transform: rotate(68deg);
+    -webkit-transform: rotate(68deg);
+    transform: rotate(68deg);
+}
+.grd-sector.long-off{
+	-ms-transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+    transform: rotate(18deg);
+}
+.grd-sector.long-on{
+	-ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+.grd-sector.mid-wicket{
+	-ms-transform: rotate(-70deg);
+    -webkit-transform: rotate(-70deg);
+    transform: rotate(-70deg);
+}
+
+.session-link.active .action-btn,.nr-title a.select,.nr-title a.expanded{
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.add-log{
+	width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 15px;
+	background-color: #0667d6;
+    color: #fff;
+}
+.add-log:hover,.add-log:focus{color:#fff;}
+
+/*------------ Hover Effects  --------------*/
+.view {
+   width:100%;
+   height: 240px;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+   border-radius:5px;
+}
+.view .mask,.view .content {
+   width:100%;
+   height: 240px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 20px 0 0 0;
+}
+.view p {
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 20px 20px;
+   text-align: center;
+   line-height:initial;
+   margin:0;
+}
+.view a.info {
+   display: inline-block;
+   text-decoration: none;
+   padding: 7px 14px;
+   background:rgba(0,0,0,.8);
+   color: #fff;
+   border:0;
+   text-transform: uppercase;
+}
+.view a.info: hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+
+.view-fifth img,.game-picture:before {
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.view-fifth .mask {
+   background-color: rgba(0,0,0,0.5);
+   -webkit-transform: translateX(-300px);
+   -moz-transform: translateX(-385px);
+   -o-transform: translateX(-385px);
+   -ms-transform: translateX(-385px);
+   transform: translateX(-385px);
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+.view-fifth h2 {
+   background: rgba(255, 255, 255, 0.5);
+   color: #000;
+   -webkit-box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+   -moz-box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+   box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+}
+.view-fifth p {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   color: #333;
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-fifth:hover .mask {
+   -webkit-transform: translateX(0px);
+   -moz-transform: translateX(0px);
+   -o-transform: translateX(0px);
+   -ms-transform: translateX(0px);
+   transform: translateX(0px);
+}
+/* .view-fifth:hover img { */
+   /* -webkit-transform: translateX(365px); */
+   /* -moz-transform: translateX(365px); */
+   /* -o-transform: translateX(365px); */
+   /* -ms-transform: translateX(365px); */
+   /* transform: translateX(365px); */
+/* } */
+.view-fifth:hover p {
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+#video-modal button.close {
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background-color: #cc0000;
+    opacity: 1;
+    color: #fff;
+    font-weight: normal;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+.tournament-bg,.game-picture{height:240px; overflow:hidden;}
+.tournament-bg img{margin-top:calc(52% - 240px);}
+.on {
+  fill: red;
+  stroke: red;
+  stroke-width:0;
+}
+.test-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.test-header {
+    padding: 4px;
+    font-size: 13px;
+}
+
+.game-container .view{height:100%;}
+.game-picture:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:38px;
+    left: 0;
+    content: '';
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
+}
+.game-container a:hover .game-picture:before{background-color:transparent;}
+.game-container a:hover img{
+	-webkit-transform: translateZ(0) translateY(-5%) scale(1.08);
+    transform: translateZ(0) translateY(-5%) scale(1.08);
+}
+.playerlist-page .watchlist-table td{border-bottom: 5px solid #e9e9e9;}
+.playerlist-page .watchlist-table tr a.view-profile {
+    border: 1px solid #00d25b;
+    padding: 5px 10px;
+    color: #00d25b;
+    border-radius: 25px;
+}
+.playerlist-page .watchlist-table tr a.view-profile:hover{background-color:#00d25b;color:#fff;}
+
+.playerlist-page .watchlist-table tr:nth-child(2n+2) a.view-profile {
+    border: 1px solid #ffab00;
+    padding: 5px 10px;
+    color: #ffab00;
+    border-radius: 25px;
+}
+.playerlist-page .watchlist-table tr:nth-child(2n+2) a.view-profile:hover{background-color:#ffab00;color:#fff;}
+
+.playerlist-page .watchlist-table tr:nth-child(3n+3) a.view-profile {
+    border: 1px solid #fc424a;
+    padding: 5px 10px;
+    color: #fc424a;
+    border-radius: 25px;
+}
+.playerlist-page .watchlist-table tr:nth-child(3n+3) a.view-profile:hover{background-color:#fc424a;color:#fff;}
+
+.playerlist-page .watchlist-table tr:nth-child(4n+4) a.view-profile {
+    border: 1px solid #0080ff;
+    padding: 5px 10px;
+    color: #0080ff;
+    border-radius: 25px;
+}
+.playerlist-page .watchlist-table tr:nth-child(4n+4) a.view-profile:hover{background-color:#0080ff;color:#fff;}
+
+.bio-hlt {
+    font-size: 72px;
+    font-family: 'MontserratBold';
+    color: #fff;
+}
+.bio-hlt span{font-size:14px;position:relative;padding-left:5px;color: #fff;}
+.bio-hlt span:before{position:absolute;bottom:0;left:-6px;content:'';width:3px;height:30px;background-color:#0667d6;display:block;}
+.bio-list {
+    background-color: #0667d6;
+    margin: 5px 0;
+    padding:18px 10px;
+    border-radius: 5px;
+	position:relative;
+}
+.bio-list:before{
+	    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    display: block;
+    background-image: url(../images/bio-list-bg.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 150% 112%;
+}
+.profile-picture {
+    margin-bottom: -10px;
+}
+.bio-list p {
+    color: #fff;
+    font-size: 14px;
+}
+.bio-ico,.bio-info {
+    display: inline-block;
+}
+.bio-info {
+    padding-left: 10px;
+	color:#fff;
+	font-size:18px;
+	font-family:'QuicksandBold';
+}
+.profile-body .normal-table tr.table-hdr {
+    background-color: #039cfd;
+}
+.profile-body .normal-table tr.table-hdr td {
+    padding: 10px 5px;
+}
+.profile-body .white {
+    margin-bottom: 40px;
+}
+.bio-injury-container {
+    margin-top: 30px;
+}
+.profile-body .white {
+    margin-top: -20px;
+}
+.player-profile-page .human-front,.player-profile-page .human-back{
+	width: 50%;
+    float: left;
+}
+.player-profile-page .player-injury .human-back{position:relative;}
+.player-profile-page .player-injury .human-back .injurymark1,.player-profile-page .player-injury .human-back .injurymark2{position:absolute;right:50px;background-color:#0667d6;width:180px;padding:10px;}
+.player-profile-page .player-injury .human-back .injurymark1{top:10px;}
+.player-profile-page .player-injury .human-back .injurymark2{bottom:10px;}
+.player-profile-page .player-injury .human-back .injurymark1 p,.player-profile-page .player-injury .human-back .injurymark2 p{font-size:14px;color:#fff;}
+.injurymark1:before {
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: 2px;
+    background-color: #039cfd;
+    left: -138px;
+    top: 40px;
+    transform: rotate(-25deg);
+}
+.injurymark2:before {
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 2px;
+    left: -196px;
+    background-color: #039cfd;
+    transform: rotate(20deg);
+}
+.profile-header.swimming-bg{background-image:url(../images/swimming-bg.png);}
+.profile-header.football-bg{background-image:url(../images/football-bg.png);}
+.profile-header.archery-bg{background-image:url(../images/archery-bg.png);}
+.profile-header.trackfield-bg{background-image:url(../images/trackfield-bg.png);}
+.profile-header .white{background-color:transparent;}
+.playerlist-page .third-tab{margin-bottom:0;}
+.tournament-filter.tnmt-bk.mt-5{margin-top:5px;}
+.tournament-filter.tnmt-bk a .fa{color:#fff;}
+.playerlist-page .watchlist-img {background-color:#868686;}
+.player-profile-page .normal-table td{padding:8px 5px;}
+.player-profile-page .lg-share-demo,.player-profile-page .video-container{margin-bottom:0}
+.player-profile-page .video-container a {
+    border: 1px solid #868686;
+    border-radius: 20px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+@media screen and (max-width:1366px)
+{
+	.plr-performance-container .overview-body p:nth-child(1){font-size:18px;}
+	.plr-performance-container .overview-header{font-size:13px;}
+	.tournament-bg img{margin-top: calc(70% - 240px);}
+	.assign-pgm-parameter .draggable-widget{width:115px;}
+}
+@media screen and (min-width:1024px) and (max-width:1366px) 
+{
+	.left-container{width:280px;}
+	.left-container .secondary-tab a{padding:10px 15px;}
+	.modal-body{max-height:500px;}
+}
+@media screen and (min-width:1280px)
+{
+    #video-modal .modal-dialog{
+        width:870px;
+    }
+}
+@media screen and (min-width:320px) and (max-width:1279px) {
+    #video-modal .modal-dialog{
+        width:70%;
+    }
+}
+@media screen and (max-width:1280px)
+{
+	.assign-pgm-parameter .draggable-widget{width:105px;}
+	.status-info img{width:60px}
+	.wellness-chart-container .col-md-5{font-size:11px;}
+}
+@media screen and (min-width:1025px) and (max-width:1280px)
+{
+	.dropdown-container{margin-left:0%;}
+	.normal-table *{font-size:12px !important;}
+	.chart-container .col-md-6{padding:0;}
+	.expand-row td {padding:3px 0px;}
+}
+@media screen and (max-width:1023px)
+{
+    header .col-md-4, header .col-md-8{float:left;}
+    header .col-md-4{width:33.33333333%;}
+    header .col-md-8{width:66.66666667%;}
+	.login-left,.login-right{width:100%;}
+	.login-background{overflow-y:auto;}
+}
+
+@media screen and (min-width:1024px) and (max-width:1280px) 
+{
+     .chart-design{width:90% ; height:312px;}
+}
+@media screen and (min-width:980px) and (max-width:1024px) 
+{
+   
+.chart-design{width:80% ; height:278px;}
+}
+@media screen and (min-width:640px) and (max-width:979px) {
+.chart-design{width:60% ; height:208px;}
+}
+@media screen and (max-width:980px){
+	.login-controls .col-md-8,.login-controls .col-md-4{width:100%;}
+	.login-container{width:85%;}
+	.login-controls{width:260px;}
+	.login-container {margin: 60px auto 10px;}
+	.associate-logo img{width:120px;}
+	.associate-logo img{margin:10px auto;}
+	.login-title h1{font-size:40px;}
+	.login-controls .col-md-8,.login-controls .col-md-4{text-align:center;}
+}
+@media screen and (min-width:480px) and (max-width:639px) {
+.chart-design{width:50% ; height:173px;}
+}
+/*------------------start pageloader -----------------------*/
+/*.page-content{position:absolute; background-color:transparent; padding:0;}*/
+.loadercontainer{position:absolute; overflow:hidden; top:0; left:0; right:0; bottom:0; z-index:3000;}
+.loadercontainer{background-color:rgba(0, 0, 0, 0.36);}
+	.preloaderdoted{width:12px; height:12px; position:absolute; background-color:#ccc; top:50%; border-radius:50%;}
+	.preloaderdoted:nth-child(1){background-color:#ab0743; -webkit-animation:move 3s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23); animation:move 3s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);}
+	.preloaderdoted:nth-child(2){background-color:#009AD7; -webkit-animation:move 3s 150ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23); animation:move 3s 150ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);}
+	.preloaderdoted:nth-child(3){background-color:#673499; -webkit-animation:move 3s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23); animation: move 3s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);}
+	.preloaderdoted:nth-child(4){background-color:#2644bc; -webkit-animation:move 3s 450ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23); animation:move 3s 450ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);}
+	@-webkit-keyframes move{
+	  0% {left: 0%;}
+	  100% {left: 100%;}
+	}
+	@keyframes move{
+	  0% {left: 0%;}
+	  100% {left: 100%;}
+	}
+/*-------------------end pageloader ----------------------*/
+
+/*------- Page Loader -------*/
+.pageloader{background-color:rgba(0, 0, 0, 0.4); width:100%; height:100%; position:relative; z-index:10;}
+.lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  z-index:10;
+  left:calc(50% - 32px);
+  top:calc(50% - 32px);
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ffff00;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+/*------- End Page Loader -------*/
+
+
+
+/* div loader start */
+
+.loader-container{position:relative;}
+.loader-overlay{position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.8);z-index:3;}
+
+.lds-spinner {
+  color: official;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin:30px auto 0;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* div loader end */
+
+/* video document page upload loader start */
+
+.lds-dual-ring {
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+.lds-dual-ring:after {
+	content: " ";
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid #109226;
+    border-color: #109226 transparent #109226 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    margin-top: 3px;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tick-box{
+	background-image: url(../images/tick-box.gif);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    vertical-align: middle
+}
+
+/* video document page upload loader end */
+
+/* mobile preview demo css */
+.mobile-container {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ddd;
+}
+.mobile-headder {
+    color: #fff;
+    padding: 10px 10px;
+    height: 40px;
+}
+.mobile-body {height:330px;padding:10px;}
+.mobile-footer {
+    padding: 5px 10px;
+    height: 30px;
+}
+.mobile-tbl-hdr {
+    color: #fff;
+    padding: 5px 10px;
+}
+.mobile-tbl-row {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+
+.mobile-layout {
+    background-image: url(../images/iphonexr.png);
+    width: 280px;
+    height: 564px;
+	margin:0 auto;
+	padding: 40px 21px 30px 21px;
+}
+.layout-view {
+    background-color: #f5f5f5;
+    display: block;
+    min-height: 502px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 5px;
+}
+.ml-header {
+    vertical-align: middle;
+	margin-bottom: 10px;
+}
+a.ml-back {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+}
+.ml-header p {
+    margin: 0;
+    width: calc(100% - 80px);
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: 'QuicksandBold';
+    text-transform: uppercase;
+}
+a.ml-filter {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    display: inline-block;
+}
+a.ml-filter .fa{font-size:20px;}
+a.ml-back .fa{color:#fff;font-size:14px;}
+.ml-fx-list {
+    margin: 8px 0 20px;
+    display: block;
+	border-radius:5px;
+	overflow:hidden;
+	background-color:#fff;
+	box-shadow: 2px 2px 23px rgb(0 0 0 / 13%);
+}
+.ml-fx-header {
+    padding: 5px;
+}
+.ml-fx-time .fa {
+    color: #fff;
+    font-size: 18px;
+}
+.ml-fx-time {
+    width: calc(100% - 100px);
+    display: inline-block;
+    color: #fff;
+}
+.ml-fx-viewbtn {
+    width: 90px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px;
+}
+.ml-fx-place {
+    vertical-align: middle;
+    margin: 5px 0;
+}
+.ml-fx-place, .ml-fx-teams {
+    padding: 0 5px;
+}
+.ml-fx-place .fa {
+    font-size: 18px;
+    margin-right: 4px;
+}
+.ml-fx-teams img {
+    width: 40px;
+}
+.ml-fx-score{font-family: 'QuicksandBold';}
+.ml-fx-status {
+    border-top: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* end mobile */
+.secondary-tab-container.module tr td,.form-table.documents-tbl td {
+    vertical-align: middle;
+}
+table.form-table.documents-tbl {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.form-table.documents-tbl td .radio-group label {
+    margin-left: 5px;
+}
+.form-table.documents-tbl td .radio-group{margin-left:12px;}
+.subcat-container .form-control{width:calc(100% - 35px);display:inline-block;}
+.subcat-container a.addsubcategory{width:24px;display:inline-block;margin-left:5px;}
+.subcat-container a.addsubcategory .fa {
+    color: #fff;
+    font-size: 11px;
+}
+.subcat-container a.addsubcategory {
+    width: 24px;
+    display: inline-block;
+    margin-left: 2px;
+    text-align: center;
+    background-color: #0667d6;
+    height: 20px;
+}

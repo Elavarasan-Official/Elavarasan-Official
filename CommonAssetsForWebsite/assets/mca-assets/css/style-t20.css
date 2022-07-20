@@ -1,0 +1,696 @@
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.br-8{
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px
+}
+.br-3,.mobile-view .logo,.tnpl{
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px
+}
+.border-radius,.error-widget,.success-widget,.personal-info{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px
+}
+.top-radius,.secondary-tab a{
+    -webkit-border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    border-radius:5px 5px 0 0
+}
+.right-radius{
+    -webkit-border-radius:0 5px 5px 0;
+    -moz-border-radius:0 5px 5px 0;
+    border-radius:0 5px 5px 0
+}
+.bottom-radius{
+    -webkit-border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+    border-radius:0 0 5px 5px
+}
+.fixtures-link .border-radius{
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px
+}
+.left-radius{
+    -webkit-border-radius:5px 0 0 5px;
+    -moz-border-radius:5px 0 0 5px;
+    border-radius:5px 0 0 5px
+}
+*{
+    margin:0;
+    padding:0;
+    font-family:PoppinsRegular,Arial,Helvetica,sans-serif;
+    font-size:14px;
+    color:#333;
+    white-space:normal;
+}
+ul,li{
+    list-style:none
+}
+a,a:active,a:hover,a:focus,img,input,button,textarea{
+    outline:0 none;
+    text-decoration:none;
+}
+a{word-wrap:break-word;}
+select:focus,.slick-list:focus,.slick-prev:focus,.slick-next:focus{
+    outline:none
+}
+table{
+    border-collapse:collapse;
+    vertical-align:top;
+    width:100%
+}
+input,button{
+    overflow:visible
+}
+button,input[type="submit"],.search-ico,.btn-close{
+    cursor:pointer
+}
+strong,b,b i{
+    font-size:inherit;
+    color:inherit;
+    font-weight:400
+}
+.hlt-txt{
+    font-size:inherit;
+    color:red
+}
+.txt-center{
+    text-align:center
+}
+.txt-right{
+    text-align:right
+}
+.txt-left{
+    text-align:left
+}
+.error,.success{
+    text-align:left!important
+}
+.solutions-list li,.blog-page p,.modules-container p,.error-info p{
+    text-align:justify
+}
+img{
+    margin-left:auto;
+    margin-right:auto
+}
+p a{
+    font-size:inherit
+}
+.isotope .isotope-item,.news-img img{
+    -webkit-transition-duration:.8s;
+    -moz-transition-duration:.8s;
+    transition-duration:.8s
+}
+a,a:hover,.main-menu-container.fixed, .main-menu-container.fixed .container:before,.main-menu-container.fixed .logo img,.main-menu-container.fixed .tnpl,.main-tab a:hover:before,.main-tab a.select:before,.main-menu > li > a:hover:before,.main-menu > li > a.select:before, .toggle-bar, .toggle-bar:before, .toggle-bar:after, .toggle-wrap.select .toggle-bar, .toggle-wrap.select .toggle-bar:before, .toggle-wrap.select .toggle-bar:after,.recent-match-container:hover .view-btn,.recent-match-container:focus .view-btn,.dd-panel{
+    -webkit-transition:all 300ms ease-in-out;
+    -moz-transition:all 300ms ease-in-out;
+    -o-transition:all 300ms ease-in-out;
+    transition:all 300ms ease-in-out
+}
+.main-menu li .dd-menu,.dd-panel a,.news-img a{
+    -webkit-transition:all .1s ease;
+    -moz-transition:all .1s ease;
+    -o-transition:all .1s ease;
+    transition:all .1s ease;
+}
+.main-tab a:before,.main-menu > li > a:before,.recent-match-container .view-btn{
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+    -o-transform:scale(0);
+    transform:scale(0)
+}
+.main-tab a:hover:before,.main-tab a.select:before,.main-menu > li > a:hover:before,.main-menu > li > a.select:before,.recent-match-container:hover .view-btn,.recent-match-container:focus .view-btn,.news-img img{
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1)
+}
+.news-img:hover img{
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+}
+.main-menu-container.fixed .logo img,.main-menu-container.fixed .tnpl{
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    -o-transform:scale(0.8);
+    transform:scale(0.8)
+}
+.isotope .isotope-item{
+    -webkit-transition-duration:.8s;
+    -moz-transition-duration:.8s;
+    transition-duration:.8s
+}
+.home-services .services,.home-services .services:before,.home-services .services:after,.home-services .services:hover:before,.home-services .services:hover:after{
+    transition:1s
+}
+.home-services .services:before{
+    -webkit-transform-origin:100% 0;
+    transform-origin:100% 0
+}
+.home-services .services:after{
+    -webkit-transform-origin:0 100%;
+    transform-origin:0 100%
+}
+.toggle-bar:before, .toggle-bar:after {
+    -ms-transform-origin: 13%;
+    -webkit-transform-origin: 13%;
+    transform-origin: 13%;
+}
+.toggle-bar:before, .toggle-bar:after {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.toggle-wrap.select .toggle-bar::before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.toggle-wrap.select .toggle-bar::after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.blog-container,.complementary-container,.white-container{
+    -webkit-box-shadow:2px 2px 2px rgba(0,0,0,.04);
+    box-shadow:2px 2px 2px rgba(0,0,0,.04)
+}
+header.fixed .main-menu-container{
+    -webkit-box-shadow:0 5px 5px 0 rgba(0,0,0,0.36);
+    box-shadow:0 5px 5px 0 rgba(0,0,0,0.36)
+}
+.filter-categories a{
+    box-shadow:none
+}
+.box-shadow{
+    -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.18);
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.18)
+}
+.sponsors .item{
+    -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.18);
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.18)
+}
+.team-desc img{
+    -webkit-filter:grayscale(1);
+    -moz-transform:grayscale(1);
+    -o-transform:grayscale(1);
+    transform:grayscale(1);
+    filter:gray
+}
+.team-desc:hover img{
+    -webkit-filter:grayscale(0);
+    filter:none
+}
+.fill{
+    background-position:top center;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover
+}
+
+.main-menu-container .container:before{-ms-transform: skew(-10deg,0deg); /* IE 9 */
+    -webkit-transform: skew(-10deg,0deg); /* Safari */
+    transform: skew(-10deg,0deg); /* Standard syntax */    
+    transform-origin: bottom left;}
+.countdown-caption,.carousel-control.left,.carousel-control.right .fa,footer:before{-ms-transform: skew(-5deg,0deg); /* IE 9 */
+    -webkit-transform: skew(-5deg,0deg); /* Safari */
+    transform: skew(-5deg,0deg); /* Standard syntax */    
+    transform-origin: bottom left;}
+.carousel-control.right,.carousel-control.left .fa{-ms-transform: skew(5deg,0deg); /* IE 9 */
+    -webkit-transform: skew(5deg,0deg); /* Safari */
+    transform: skew(5deg,0deg); /* Standard syntax */    
+    transform-origin: bottom left;}
+
+.main-menu li .dd-menu{-webkit-transform:scale(0) translateX(-50%);
+    transform:scale(0) translateX(-50%);
+    -webkit-transform-origin:top left;}
+.main-menu li:hover .dd-menu{-webkit-transform:scale(1) translateX(-50%);
+    transform:scale(1) translateX(-50%);
+    -webkit-transform-origin:top left;}
+.main-menu li .dd-menu{box-shadow:0 2px 3px rgba(0,0,0,.1);}
+.dd-panel{-webkit-transform:scale(0) translateX(0);
+    transform:scale(0) translateX(0);
+    -webkit-transform-origin:top center;
+}
+.dd-panel.open{-webkit-transform:scale(1) translateX(0);
+    transform:scale(1) translateX(0);
+    -webkit-transform-origin:top center;
+}
+.main-menu li .dd-menu{box-shadow:0 2px 3px rgba(0,0,0,.1);}
+a, .main-menu li,.next-match .team-vs-team > div,.recent-match-container .col-md-6 > div,.breadcrumbs li,.breadcrumbs span,.search-container *,.match-center-stats .team-vs-team .team-logo,.match-center-stats .team-vs-team .team-name-score,.player-list img, .player-list .player-name,.ball-entry,.ball-description,.ball-entry .ball,.search-form *,.last-matches,.player-stats-container .main-tab,.how-out,.scores .end-of-over,.scores .runs{display:inline-block;}
+.main-menu li .dd-menu, .main-menu li .dd-menu:before, .main-menu li li, .main-menu li li a,.time-circles > div > span,.mobile-view .toggle-bar,.video-container a,.dd-panel, .view-by-icon span,.dd-panel.open a,.overview .view-btn{display:block;}
+.player-stats .player-name-num,.squad-container .player-name-num,.view-by-icon,.dd-panel a{display:table;}
+.player-stats .player-no,.player-stats .player-name,.squad-container .player-no,.squad-container .player-name,.dd-panel span{display:table-cell;}
+.mobile-view, .mobile-view aside, .mobile-view .overlay, .mobile-demo,.search-form{display:none;}
+.carousel-control,.recent-match-container:hover .view-btn,.recent-match-container:hover .overlay,.recent-match-container:focus .view-btn,.recent-match-container:focus .overlay{opacity:1;}
+.loss .team-logo{opacity:0.6;}
+.recent-match-container .overlay,.recent-match-container .view-btn{opacity:0;}
+
+.points-table-container .points-table>div, .mobile-view .toggle-wrap,.select-season,.select-player,.view-by-icon,.ball-by-ball-title,.ball-by-ball-live, .owl-carousel.ball-by-ball .owl-nav .owl-prev{float:left;}
+.mobile-view .logo,.img-right,.owl-carousel.ball-by-ball .owl-nav .owl-next{float:right;}
+
+body{background-color:#f5f5f5;}
+.ball-entry .ball{background-color:#eaeaea;}
+.main-menu-container,.mobile-view,.view-btn,.carousel-control:hover,.stats-container,.squad-container .player-no,.footer02,.stats-info .main-tab, .third-tab a:hover, .third-tab a.select,.team-dd .player-list,.overview-header,.overview .view-btn:hover,.error-page{background-color:#133798;}/*#d91219*/
+.ball-by-ball-container .ball-by-ball-title,.ball-by-ball .ball.bw{background-color:#d91219;}
+.main-menu-container .container:before,.main-menu > li > a:hover:before, .main-menu > li.on > a:before, .main-menu > li > a:focus:before, .main-menu > li > a.select:before, .main-menu li .dd-menu, .next-match,.main-tab a:before,footer:before, .mobile-view aside,.vjs-default-skin .vjs-play-progress,.vjs-default-skin .vjs-volume-level,.recent-match-container .view-btn:hover,.personal-info, .table-result td,.search,.btn-search,.search-ico,.btn-close,.player-stats-container .view-btn,.first-place.dd{background-color:#fdc705;}
+.carousel-control,.player-stats .player-no,.squad-container,footer{background-color:#0a0a0a;}
+.next-match .team-vs-team .team-name,.white,.stats-container .main-tab-container,.squad-container .main-tab-container .item, .toggle-bar:before, .toggle-bar:after,.mobile-view .logo,.inner-page.teams-page .players-listing,.view-by-icon, .dd-panel,.squad-container .item,.single-news,.single-video,.match-center-container .secondary-tab a:hover,.match-center-container .secondary-tab a.select,.match-center-stats .team-vs-team .team-logo, .third-tab a,.overview-body,.tnpl{background-color:#fff;}
+.player-stats .col-md-8,.squad-container .players-listing .col-md-8{background-color:#f2f2f2;}
+.points-table-container .points-table,.normal-table .table-hdr,.scores{background-color:#252525;}
+.ball-by-ball .ball.b4, .team-atp .player-list{background-color:#095bad;}
+.ball-by-ball .ball.b6{background-color:#41cb52;}
+.social-container .fb-title{background-color:#3b5999;}
+.social-container .twitter-title{background-color:#45b0e3;}
+.social-container .instagram-title{background-color:#e31e25;}
+.overview .view-btn{background-color:#333;}
+.won{background-color:#41cb52;}
+.archives-container .loss{background-color:#cc0000;}
+.draw{background-color:#095bad;}
+.countdown-caption{background-color:rgba(253,199,5,0.9);}
+.overlay,.search-container,.match-center-container .secondary-tab a,.ball-by-ball-container{background-color:rgba(0,0,0,0.72);}
+.main-menu li li a:hover{background-color:rgba(0,0,0,0.18);}
+.view-btn:hover,.search-container input{background-color:transparent;}
+.inner-page.teams-page .squad-container{background:none;}
+
+.hdr-social a,.points-table-container .points-table .sno,.points-table-container .points-table .points-tally{background-image:url(../images/img-sprite.png);}
+.countdown-caption{background-image:url(../images/banner-bg.png);}
+.body{background-image:url(../images/body-bg.png);}
+.recent-container .news-container figcaption,.recent-container .video-container figcaption,.recent-container .photo-container figcaption{background-image:url(../images/news-bg.png);}
+.next-match{background-image:url(../images/next-match-bg.png);}
+.stats-container{background-image:url(../images/stats-bg.png);}
+.squad-container{background-image:url(../images/squad-bg.png);}
+footer .footer01{background-image:url(../images/footer-bg.png);}
+.player-stats .col-md-8,.squad-container .players-listing .col-md-8{background-image:url(../images/slope-bg.png);}
+.inner-banner{background-image:url(../images/inner-banner.jpg);}
+.match-center-banner{background-image:url(../images/match-center-banner.jpg);}
+.first-place.dd{background-image:url(../images/teams/dd-logo.png);}
+.carousel-control,.carousel-control.left,.carousel-control.right{background-image:none;}
+.hdr-social a,.player-stats .col-md-8,.squad-container .players-listing .col-md-8,.body,.squad-container,.recent-happenings .item>div figcaption,footer .footer01,.inner-banner,.first-place.dd,.match-center-banner{background-repeat:no-repeat;}
+
+.inner-banner,.first-place.dd,.match-center-banner{background-position:50% 50%;}
+.countdown-caption{background-position:20% 50%;}
+.recent-container .news-container figcaption,.recent-container .video-container figcaption,.recent-container .photo-container figcaption,.player-stats .col-md-8,.squad-container .players-listing .col-md-8{background-position:100% 0;}
+.news-container:hover figcaption,.video-container:hover figcaption, .photo-container:hover figcaption{background-position:100% -250px;}
+.hdr-social .ico-fb{background-position:0 0;}
+.hdr-social .ico-fb:hover{background-position:0 -32px;}
+.hdr-social .ico-twitter{background-position:-40px 0;}
+.hdr-social .ico-twitter:hover{background-position:-40px -32px;}
+.hdr-social .ico-gp{background-position:-80px 0;}
+.hdr-social .ico-gp:hover{background-position:-80px -32px;}
+.points-table-container .points-table .sno{background-position:0 -90px;}
+.points-table-container .points-table .points-tally{background-position:-55px -90px;}
+footer .footer01{background-position:50% 100%;}
+
+.inner-banner,.match-center-banner{background-size:cover;}
+
+.view-by-icon::after{border:4px solid transparent;}
+.view-btn,.view-btn:active,.view-btn:focus,.overview .view-btn:hover{border:2px solid #133798;}
+.player-stats-container .view-btn{border:2px solid #fdc705;}
+.overview .view-btn{border:2px solid #333;}
+.view-btn:hover,.error-page .view-btn{border:2px solid #fff;}
+.recent-match-container .view-btn:hover{border:2px solid #fdc705;}
+.view-by-icon, .dd-panel{border:1px solid #133798;}
+.sponsors .item{border:1px solid #dae0e5;}
+.search,.btn-search{border:1px solid #fdc705;}
+.dd-panel{border-top:0;}
+.inner-page.teams-page .players-listing{border:1px solid #ccc;}
+.main-menu li .dd-menu:before{border-right:8px solid transparent;}
+.main-menu li .dd-menu:before{border-bottom:8px solid #fdc705;}
+.mobile-view aside a{border-bottom:1px solid rgba(0,0,0,0.18);}
+.ball-by-ball-commentary{border-bottom:1px solid #e8e8e8;}
+.main-menu li .dd-menu:before{border-left:8px solid transparent;}
+.recent-match-container,.post-listing,.table-row td,.first-place{border-bottom:1px solid #ddd;}
+.mobile-view .toggle-bar{border-top:6px solid #fff;}
+.toggle-wrap.select .toggle-bar{border-top:6px solid transparent;}
+.view-by-icon::after{border-top:4px solid #222;}
+.search-container input{border:0;}
+
+.next-match .team-vs-team .team-name,.ball-by-ball .ball,.match-center-stats .team-vs-team .team-logo,.last-matches{border-radius:100%;}
+.main-menu-container .logo{border-radius:3px;}
+
+.player-name-num .player-no,.player-pos{font-family:PoppinsBold;}
+.countdown-section *,.view-btn,h1,h2,h3,h4,h5,h6,.next-match *,.inner-page-title, strong,.match-center-result,.match-center-stats .team-vs-team .team-name,.match-center-stats .team-vs-team .team-score,.overview-header,.overview .player-name,.overview .total-score{font-family:PoppinsSemiBold;}
+.recent-title, .recent-match-container .team-score,.player-name-num .player-name,.player-name-num .player-name *,.news-info a,.main-menu li a{font-family:PoppinsMedium;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+
+.vjs-default-skin:hover .vjs-progress-control{font-size:0.3em;}
+.error-page h1{font-size:48px;}
+.match-center-stats .team-vs-team .team-score{font-size:40px;}
+.inner-page-title{font-size:32px;}
+.countdown-section .team-name, .countdown-section .team-name *,.stats-table .stats-value,.match-center-stats .team-vs-team .team-name{font-size:24px;}
+.overview .player-name,.overview .total-score,.player-pos{font-size:20px;}
+h2,.recent-match-container .team-score,.player-name-num .player-no,.points-table *,.search-container input,.match-center-result,.match-center-page-container h4,.overview-header{font-size:18px;}
+.view-btn,.player-stats .player-name,.squad-container .players-listing .player-name,.match-center-venue,.match-center-stats .team-rr,.match-center-stats .team-over,.player-list .player-name,.error-page p{font-size:16px;}
+.view-by-icon .dd-panel{font-size:14px;}
+.carousel-control .fa, .recent-container .recent-title,.recent-match .ground-name,.main-tab a,.player-stats .player-proficiency{font-size:13px;}
+.recent-container .recent-date,.view-by-icon .search-label,.date,.ball-by-ball .ball,.how-out{font-size:12px;}
+
+h1,h2,h3,h4,h5,h6,.post-listing a,.ball-entry .over,.search{color:#222;}
+.main-menu a, .main-menu a *,.view-btn,.view-btn:active,.view-btn:focus,.view-btn:hover,.carousel-control .fa, .recent-container .recent-date, .recent-container .recent-title,.next-match *,.stats-container h2,.main-tab a,.player-name-num .player-no,.points-table .sno,.points-table .team-name,.squad-container h2,.social-container h2,footer *,.vjs-control-bar *,.inner-page-title,.breadcrumbs li,.normal-table .table-hdr td,.search-container .fa,.search-container input,.match-center-container .secondary-tab a,.ball-by-ball-container .ball-by-ball-title,.ball-by-ball-container .ball-by-ball-title .inns-no,.ball-by-ball .ball.b4,.ball-by-ball .ball.b6,.ball-by-ball .ball.bw,.ball-by-ball .over,.owl-carousel.ball-by-ball .owl-nav *, .match-center-stats *,.match-center-stats .team-vs-team .win *, .third-tab a:hover, .third-tab a.select,.player-list .player-name,.scores,.scores *,.overview-header,.error-page h1,.error-page p{color:#fff;}
+.how-out{color:#95a1a9;}
+.breadcrumbs span{color:#ccc;}
+.date,.date .fa{color:#8a8a8a;}
+.breadcrumbs li a{color:#fdc705;}
+.win, .win *,.player-name-num .player-name,.player-stats .player-proficiency,.points-table .points-tally,.squad-container *,footer .footer01 .col-md-4:first-child *,.mobile-view aside a,.recent-match-container .view-btn:hover{color:#0a0a0a;}
+.stats-table .stats-value,.single-player-details h2,.news-info a:hover,.single-news:hover h3 a,.post-listing a:hover,.single-video:hover a, .single-video a:hover,.match-center-container .secondary-tab a:hover,.match-center-container .secondary-tab a.select,.page-search ::placeholder{color:#133798;}
+.view-by-icon .search-label,.news-info a,.single-video figcaption a{color:#444;}
+.loss, .loss *, .third-tab a{color:#aaa;}
+.stats-table .stats-label{color:#6f6f6f;}
+.footer02 a, .footer01 a:hover{color:#ffea00;}
+
+.main-menu a,.view-btn,h2, .ground-name, .match-date-time, .recent-match-container .team-name,.main-tab a,.player-stats .player-name,.player-stats .player-proficiency,.stats-table .stats-label,.squad-container .players-listing *,.view-by-icon .search-value,.dd-panel span,.personal-info .normal-table td,.match-center-page-container h4,.scores *,.overview-header,.overview .player-name{text-transform:uppercase;}
+
+.mobile-view, .mobile-view aside, .mobile-view .overlay,.main-menu-container.fixed{position:fixed;}
+.main-menu > li > a,.countdown-container .container,.time-circles,.recent-happenings .item>div,.recent-happenings .item>div figcaption,.main-tab a,.main-tab-container,footer,.footer02,.mobile-view .toggle-wrap,.mobile-view .toggle-bar,.recent-match-container,.select-season,.select-player,.view-by-icon,.inner-page .players-listing,.page-search,.videoWrapper{position:relative;}
+.main-menu-container .container:before, .main-menu > li > a:before, .main-menu li .dd-menu, .main-menu li .dd-menu:before, .main-menu > li.on > a:before,.countdown-container,.countdown-caption,.time-circles > div,.recent-happenings .item>div figcaption:before,.recent-happenings .item>div img,.recent-happenings .item>div video,.main-tab a:before,.player-stats img,.squad-container .players-listing img,footer:before,.toggle-bar:before,.toggle-bar:after,.recent-match-container .overlay,.recent-match-container .view-btn,.view-by-icon::after,.dd-panel,.owl-carousel.ball-by-ball .owl-nav,.search-form,.tnpl,.live-match,.videoWrapper iframe{position:absolute;}
+
+.mobile-view{z-index:20;}
+.main-menu-container.fixed{z-index:18;}
+.carousel-control{z-index:15;}
+.main-menu li .dd-menu,.dd-panel{z-index:11;}
+.countdown-container .container,.recent-match-container .overlay,.recent-match-container .view-btn{z-index:10;}
+.countdown-caption{z-index:5;}
+.footer02{z-index:2;}
+footer .footer01,.owl-carousel.ball-by-ball .owl-stage-outer,.search-form{z-index:1;}
+.main-menu > li > a:before,footer,.owl-carousel.ball-by-ball .owl-nav{z-index:0;}
+footer:before{z-index:-1;}
+
+.main-menu-container .container:before, .main-menu > li.on > a:before, .main-menu > li > a:before, .main-menu li .dd-menu:before,.main-tab a:before,footer:before,.toggle-bar:before,.toggle-bar:after,mobile-view .overlay,.view-by-icon::after{content:'';}
+
+.main-menu li .dd-menu{top:100%;}
+.carousel-control{top:47%;}
+.mobile-view aside, .mobile-view .overlay{top:68px;}
+.dd-panel{top:50px;}
+.recent-match-container .view-btn,.owl-carousel.ball-by-ball .owl-nav{top:30%;}
+.view-by-icon::after{top:14px;}
+.tnpl{top:10px;}
+.toggle-bar:after{top:4px;}
+.main-menu > li > a:before, .main-menu > li.on > a:before,.countdown-caption,.countdown-container,.countdown-container .container,.recent-happenings .item>div figcaption,footer:before,.mobile-view,.main-menu-container.fixed,.recent-match-container .overlay,.main-menu-container.fixed .tnpl,.videoWrapper iframe{top:0;}
+.toggle-bar:before{top:-16px;}
+.vjs-default-skin .vjs-slider-handle:before{top:-5px;}
+
+.tnpl{right:20px;}
+.view-by-icon::after{right:7px;}
+.main-menu > li > a:before, .main-menu > li.on > a:before,.player-stats img,.squad-container .players-listing img, .mobile-view aside, .mobile-view .overlay,.main-menu-container.fixed,.recent-match-container .overlay,.search-form{right:0;}
+.carousel-control.right{right:-6px;}
+
+.main-menu li .dd-menu:before{bottom:100%;}
+.countdown-container,.recent-happenings .item>div figcaption,.main-tab a:before,.player-stats img,.squad-container .players-listing img,footer:before, .mobile-view aside, .mobile-view .overlay,.recent-match-container .overlay{bottom:0;}
+.carousel-control{bottom:auto;}
+
+.main-menu li .dd-menu, .main-menu li .dd-menu:before{left:50%;}
+.main-menu > li > a:before, .main-menu > li.on > a:before,.countdown-container,.recent-happenings .item>div figcaption,.main-tab a:before, .mobile-view aside, .mobile-view .overlay,.main-menu-container.fixed,.recent-match-container .overlay,.videoWrapper iframe{left:0;}
+.main-menu-container .container:before{left:-680px;}
+footer:before{left:-28%;}
+.countdown-caption{left:-100px;}
+.recent-match-container .view-btn{left:37%;}
+.carousel-control.left{left:-16px;}
+
+.next-match .team-vs-team{margin:48px 0;}
+.player-container{margin:15px 0;}
+h1,h2,h3,h4,h5,h6,.hdr-social,.player-stats .player-proficiency,.squad-container .players-listing .player-proficiency{margin:10px 0;}
+.main-menu-container .logo{margin:3px 10px;}
+.vjs-default-skin .vjs-volume-bar{margin:1.3em auto 0;}
+.team-vs-team .versus{margin:0 40px;}
+.time-circles-container,.countdown-section,.owl-carousel.ball-by-ball{margin:0 auto;}
+.news-info h3{margin:0;}
+.player-list{margin-top:50px;}
+.news-page-container,.video-page-container,.detail-page-container,.overview .total-score,.overview .player-name,.player-pos{margin-top:30px;}
+.inner-banner .inner-page-title,.overview-container,.match-center-banner .inner-page-title{margin-top:20px;}
+.page-search{margin-top:16px;}
+.home-banner,.next-match-container,.stats-container,footer,.archives-container,.list-page-container,.our-teams-container{margin-top:15px;}
+.news-info,.news-info h3, .ball-by-ball-live .item{margin-top:10px;}
+.player-stats-container .view-btn{margin-top:5px;}
+.ball-by-ball-live .item .over{margin-top:-5px;}
+.player-list img{margin-top:-35px;}
+.main-tab a,.match-center-stats .team-vs-team .team-name-score.txt-right{margin-right:15px;}
+.ball-entry,footer .fa{margin-right:10px;}
+.hdr-social a, .date .fa,.search-container .fa,.last-matches{margin-right:5px;}
+.owl-carousel.ball-by-ball .owl-nav .owl-next{margin-right:-20px;}
+.search,.search-ico{margin-right:-4px;}
+.single-news,.single-video,.match-center-stats .team-vs-team,.match-center-result {margin-bottom:30px;}
+.inner-page .squad-container,.personal-info,.breadcrumbs,.ball-by-ball-container, .search-container,.overview{margin-bottom:20px;}
+.countdown-section .team-name, .countdown-section .countdown-timer,.main-tab,.news-page-container,.post-listing,.match-center-venue,.detail-page-container .white,.inner-page .recent-match-container,.match-center-banner .view-btn{margin-bottom:15px;}
+.recent-match-container .ground-name, .points-table-container .points-table,.ball-entry .ball{margin-bottom:5px;}
+ul,.social-container h2,.match-details p{margin-bottom:0;}
+.match-center-stats .team-vs-team .team-name-score.txt-left,.select-player{margin-left:15px;}
+.main-menu > li{margin-left:10px;}
+.how-out{margin-left:5px;}
+.main-menu li .dd-menu:before{margin-left:-10px;}
+.owl-carousel.ball-by-ball .owl-nav .owl-prev{margin-left:-20px;}
+
+.next-match{padding:30px;}
+.stats-container,.sponsors-container,.squad-container,.social-container,.squad-container .players-listing .player-details{padding:15px 0;}
+.footer01{padding:15px 0 10px;}
+.player-stats .player-details,.player-image,.single-player-details,.detail-page-container .white{padding:15px;}
+.recent-happenings .item>div figcaption,.recent-match-container,.next-match .team-name,.mobile-view .toggle-wrap,.personal-info,.stats-info .main-tab,.match-center-stats .team-vs-team .team-logo,.ball-by-ball-commentary,.scores,.match-details{padding:10px;}
+.mobile-view .logo,.normal-table td,.news-info,.single-video figcaption{padding:5px;}
+.search{padding:2px}
+.commentary-container .white{padding:0;}
+.footer02,.search-container,.overview-header{padding:10px 0;}
+.mobile-view aside a{padding:8px 10px;}
+.breadcrumbs, .third-tab a,.tnpl,.ball-by-ball-container .ball-by-ball-title{padding:5px 10px;} 
+.stats-table td,.mobile-view{padding:5px 0;}
+.view-btn,.social-container .social-title{padding:0 15px;}
+.main-menu > li > a,.match-center-container .secondary-tab a{padding:0 12px;}
+.points-table-container .points-table .team-name,.player-list .player-name{padding:0 10px;}
+.breadcrumbs span{padding:0 5px;}
+.main-menu li li a{padding:10px 15px;}
+.inner-banner,.match-center-banner{padding-top:30px;}
+.videoWrapper{padding-top:25px;}
+.recent-container{padding-top:15px;}
+.single-player-details{padding-top:5px;}
+.inner-page .squad-container{padding-top:0;}
+.view-by-icon,.end-of-over,.runs{padding-right:15px;}
+.match-details strong{padding-right:5px;}
+.videoWrapper{padding-bottom:56.25%;}
+.img-right,.post-listing{padding-bottom:10px;}
+.main-tab a{padding-bottom:5px;}
+.player-image,.stats-info .main-tab,.match-details p{padding-bottom:0;}
+.player-name-num .player-name{padding-left:15px;}
+.view-by-icon,.dd-panel,.img-right{padding-left:10px;}
+.select-season span,.select-player span{padding-left:5px;}
+
+.main-menu-container .container:before,footer:before{width:1000px;}
+.countdown-container,.time-circles > div > span,.main-tab a:before,.mobile-view,.main-menu-container.fixed,.video-container video,.news-img img,.owl-carousel.ball-by-ball .owl-nav ,.player-list,.videoWrapper iframe{width:100%;}
+.owl-carousel.ball-by-ball{width:96%;}
+.stats-table{width:80%;}
+.countdown-caption,.recent-happenings .item>div figcaption{width:50%;}
+.match-center-stats .team-vs-team .team-name-score{width:calc(100% - 170px);}
+.search-container input{width:calc(100% - 135px);}
+.points-table-container .points-table .team-name,.player-list .player-name{width:calc(100% - 115px);}
+.ball-by-ball-container .ball-by-ball-live{width:calc(100% - 102px);}
+.recent-match-container .team-name-score{width:calc(100% - 84px);}
+.ball-description{width:calc(100% - 64px);}
+.mobile-view aside,.img-right{width:300px;}
+.big .view-by-icon,.big .dd-panel{width:220px;}
+.view-by-icon, .dd-panel{width:150px;}
+.match-center-stats .team-vs-team .team-logo{width:130px;}
+.next-match .team-vs-team .team-name,.player-list img{width:108px;}
+.recent-match-container .team-logo{width:80px;}
+.carousel-control{width:64px;}
+.points-table-container .points-table .points-tally{width:60px;}
+.points-table-container .points-table .sno{width:55px;}
+.mobile-view .logo,.ball-entry{width:50px;}
+.player-stats .player-no,.squad-container .player-no{width:40px;}
+.mobile-view .toggle-bar, .toggle-bar:before, .toggle-bar:after{width:38px;}
+.hdr-social a, .ball-by-ball .ball,.btn-search,.search-ico,.btn-close{width:32px;}
+.last-matches{width:10px}
+.main-menu li .dd-menu:before,.view-by-icon::after{width:0;}
+.squad-container .players-listing.owl-carousel .owl-item img{width:auto;}
+
+html, body, .home-banner .carousel-inner, .home-banner .item, .home-banner .fill,.countdown-caption,.video-container video,.news-img img,.videoWrapper iframe{height:100%;}
+.social-widget{height:400px;}
+.fan-zone-page .news-img{height:255px;}
+.news-img{height:180px;}
+.recent-container .news-container, .recent-container .video-container, .recent-container .photo-container{height:155px;}
+.match-center-stats .team-vs-team .team-logo{height:130px;}
+.recent-container .recent-title{height:120px;}
+.next-match .team-vs-team .team-name,.player-list img{height:108px;}
+.stats-page .player-photo img{height:100px;}
+.main-menu-container, .main-menu-container .container:before{height:90px;}
+.main-menu-container .logo{height:84px;}
+.main-menu-container.fixed, .main-menu-container.fixed .container:before{height:70px;}
+.mobile-view aside{height:calc(100% - 65px);}
+.carousel-control,.main-menu-container.fixed .logo{height:64px;}
+.recent-match-container img{height:60px;}
+.view-by-icon{height:50px;}
+.search-container input{height:49px;}
+.news-info h3{height:48px;}
+.player-stats .player-no,.squad-container .player-no{height:40px;}
+.toggle-bar:before, .toggle-bar:after{height:6px;}
+.hdr-social a, .ball-by-ball .ball,.btn-search,.search,.search-ico,.btn-close{height:32px;}
+.last-matches{height:10px;}
+.main-menu > li > a:hover:before, .main-menu > li > a:focus:before, .main-menu > li > a.select:before, .main-menu > li.on > a:before{height:5px;}
+.main-tab a:before{height:4px;}
+.vjs-default-skin .vjs-volume-bar,.vjs-default-skin .vjs-volume-level{height:0.3em;}
+.main-menu li .dd-menu:before,.view-by-icon::after,.videoWrapper{height:0;}
+
+.player-stats img,.dd-panel{max-height:225px;}
+.squad-container .players-listing img{max-height:135px;}
+
+.news-detail{min-height:420px;}
+.squad-container .players-listing .col-md-8,.squad-container .players-listing .item{min-height:150px;}
+
+.main-menu > li > a{line-height:90px;}
+.main-menu-container.fixed .main-menu > li > a{line-height:70px;}
+.carousel-control .fa{line-height:64px;}
+.view-btn{line-height:45px;}
+.player-stats .player-no,.points-table-container .points-table > div,.match-center-container .secondary-tab a{line-height:40px;}
+.social-container .social-title{line-height:35px;}
+.ball-by-ball .ball,.search-ico,.btn-close{line-height:32px;}
+footer li, .third-tab a,.player-stats-container .view-btn{line-height:28px;}
+.view-by-icon span, .dd-panel span{line-height:25px;}
+p,.time-circles > div > span,.recent-container .recent-title,.next-match .ground-name,.next-match .match-date-time,.mobile-view aside a,.news-info h3,.overview .view-btn{line-height:24px;}
+.player-stats .player-no,.player-stats .player-name,.squad-container .player-no,.squad-container .player-name{line-height:20px;}
+
+.next-match .team-vs-team > div,.recent-match-container .col-md-6 > div,.player-stats .player-no,.player-stats .player-name,.squad-container .player-no,.squad-container .player-name,.view-by-icon span,.dd-panel span,.dd-panel .fa,.ball-by-ball-container *,.match-center-stats .team-vs-team  *,.player-list .player-name,.ball-entry .ball,.btn-search,.search{vertical-align:middle;}
+.ball-entry,.ball-description,.search{vertical-align:top;}
+
+.news-container, .video-container, .photo-container,.recent-container .recent-title,.main-tab-container,.news-img,.news-info h3{overflow:hidden;}
+.mobile-view aside,.dd-panel,.social-widget{overflow-y:auto;}
+body{overflow-x:hidden;}
+.main-menu li .dd-menu,.main-tab a:before{visibility:hidden;}
+.main-menu li:hover .dd-menu,.main-tab a:hover:before,.main-tab a.select:before,.dd-panel.open{visibility:visible;}
+
+@media screen and (max-width:1366px){
+footer:before{left:-45%;}
+}
+@media screen and (max-width:1280px){
+	.main-menu-container .container:before{left:-800px;}
+	footer:before{left:-50%;}
+	.main-menu{margin-right:50px;}
+}
+@media screen and (max-width:1024px){
+.main-menu-container .container:before{left:-800px;}
+footer:before{left:-50%;}
+}
+@media screen and (min-width:1200px){
+    .home-banner{height:calc(100% - 90px);}
+    .player-stats-container{padding-left:0;}
+    .countdown-section{padding-top:200px;}
+	.recent-post .col-md-4 {padding-right:0;}
+	.error-info{padding-top:120px;}
+}
+@media screen and (max-width:1199px)
+{
+    .home-banner{height:calc(100% - 75px);}
+    .footer02 *{text-align:center;}
+    .countdown-container{top:auto;}
+    .carousel-control.right{right:0;}
+    .countdown-container{bottom:10px;}
+    .carousel-control.left{left:0;}
+    .countdown-caption,.carousel-control.right, .carousel-control.left{-ms-transform: skew(0deg,0deg);-webkit-transform: skew(0deg,0deg);transform: skew(0deg,0deg);transform-origin: bottom left;}
+    footer .footer01 .col-md-4:first-child *{color:#fff;}
+    header,.main-menu-container,footer:before,.countdown-container .countdown-caption,.hidden-col{display:none}
+    .mobile-view,.mobile-demo{display:block}
+    .mobile-view .toggle-wrap{margin:10px 15px 0 0;}
+    .countdown-section{padding:10px 0;}
+    .home-banner,.body.inner-page{margin-top:70px;}
+    .countdown-section .team-name, .countdown-section .countdown-timer{margin-bottom:10px;}
+    .countdown-section{background-color:rgba(253,199,5,0.9);}
+	.scores .col-md-6{width:50%;}
+	.overview .col-md-5{width:41.66666667%;}
+	.overview .col-md-3{width:25%;}
+	.overview .col-md-2{width:16.66666667%;}
+	.overview .col-md-2,.overview .col-md-3,.overview .col-md-5,.overview .col-md-2,.scores .col-md-6{float:left;}
+}
+@media screen and (max-width:1023px)
+{
+    .carousel-control{width:32px;}
+    .carousel-control{height:32px;}
+    .carousel-control .fa{line-height:32px;}
+	.match-center-banner .team-vs-team .col-md-6{width:50%;}
+	.match-center-banner .team-vs-team .col-md-6{float:left;}
+}
+@media screen and (min-width:480px) and (max-width:980px){
+	.countdown-section{width:400px; padding:10px;}
+}
+@media screen and (max-width:768px){
+    .owl-carousel.ball-by-ball{width:92%;}
+	.match-center-stats .team-vs-team .team-logo{width:100px;}
+	.match-center-stats .team-vs-team .team-logo{height:100px;}
+	.match-center-stats .team-vs-team .team-name{font-size:18px;}
+	.match-center-stats .team-vs-team .team-score{font-size:32px;}
+}
+@media screen and (max-width:640px){
+    .next-match .team-vs-team .team-name{width:90px;}
+    .next-match .team-vs-team .team-name{height:90px;}
+    .owl-carousel.ball-by-ball{width:90%;}
+	.match-center-stats .team-vs-team .team-logo{width:80px;}
+	.match-center-stats .team-vs-team .team-logo{height:80px;}
+	.match-center-stats .team-vs-team .team-name{font-size:14px;}
+	.match-center-stats .team-vs-team .team-score{font-size:26px;}
+	.match-center-stats .team-rr, .match-center-stats .team-over{font-size:13px;}
+	.match-center-stats .team-vs-team .team-name-score{width:calc(100% - 100px);}
+}
+@media screen and (max-width:480px){
+	.countdown-section h4{margin:0;}
+    .owl-carousel.ball-by-ball{width:85%;}
+	.match-center-stats .team-vs-team .team-logo{width:60px;}
+	.match-center-stats .team-vs-team .team-logo{height:60px;}
+	.match-center-stats .team-vs-team .team-name-score{width:calc(100% - 80px);}
+	.points-table *{font-size:16px;}
+	.stats-page .player-pos, .stats-page .player-name, .stats-page .total-score{font-size:14px;}
+}
+@media screen and (max-width:360px){
+	.view-by-icon, .dd-panel{width:135px;}
+	.stats-page .player-photo img{height:auto;}
+	.player-stats img, .dd-panel{max-height:155px;}
+	.overview .total-score, .overview .player-name, .player-pos{margin-top:18px;}
+	.select-player.big{margin-top:15px;}
+	.inner-banner, .match-center-banner{padding-top:80px;}
+	.select-player.big{margin-left:0;}
+	.match-center-stats .team-vs-team .team-score{font-size:20px;}
+	.stats-table .stats-value{font-size:16px;}
+	*,.points-table *, .recent-match-container .team-score, .player-stats .player-name{font-size:12px;}
+	.match-center-stats .team-rr, .match-center-stats .team-over, .player-stats .player-proficiency{font-size:9px;}
+}
+@media screen and (max-width:320px){
+	.next-match .team-vs-team .team-name{width:72px; height:72px; padding:5px;}
+	.match-center-stats .team-vs-team .team-logo{display:none;}
+	.match-center-stats .team-vs-team .team-name-score{width:100%;}
+}
+@media screen and (min-width:320px)
+{
+    .recent-match-container .col-md-6, .player-stats .col-md-8, .squad-container .players-listing .col-md-8{float:left;}
+    .player-stats .col-md-8, .squad-container .players-listing .col-md-8{width:60%;}
+    .recent-match-container .col-md-6{width:50%;}
+}
