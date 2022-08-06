@@ -1,0 +1,54 @@
+/* Base Styles */
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  position: relative;
+}
+#cssmenu > ul > li > a {
+  display: block;
+  border:0;
+  border-top: none;
+}
+#cssmenu > ul > li > a .fa {
+    -moz-transition: "transform .3s linear";
+    -o-transition: "transform .3s linear";
+    -webkit-transition: "transform .3s linear";
+    transition: "transform .3s linear";
+    float: right;
+    font-size: 18px;
+    line-height: 19px;
+    position: absolute;
+    right:0;
+    top:11px;
+}
+#cssmenu > ul > li.active > a .fa-angle-right{
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+#cssmenu > ul > li > a:hover {
+  text-decoration: none;
+}
+#cssmenu > ul > li.active {
+  border-bottom: none;
+}
+#cssmenu ul ul {
+  display: none;
+}
+#cssmenu ul ul li {
+  padding: 0;
+  border-top: none;
+}
+#cssmenu ul ul li:last-child {
+  border-bottom: none;
+}
+#cssmenu ul ul a {
+  display: block;
+  font-weight: normal;
+}
+#cssmenu ul ul a:before {
+  left: 10px;
+}
